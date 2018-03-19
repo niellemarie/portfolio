@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Danielle Dayto's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="./app.css">
+  <link rel="stylesheet" type="text/css" href="./project.css">
+  <link rel="stylesheet" type="text/css" href="./resources.css">
+  <link rel="stylesheet" type="text/css" href="./about.css">
+</head>
+
+<body>
+  <div class="nav-container">
+    <nav>
+      <div class="left">
+        <!-- <img src={logo} class="App-logo" alt="logo" /> -->
+        <span class="name">
+          <a href='./index.html'>Danielle Dayto</a>
+        </span>
+      </div>
+      <div class="right">
+        <span class="nav-button">
+          <a href='./about.html'>About</a>
+        </span>
+        <span class="nav-button">
+          Resume
+        </span>
+        <span class="nav-button">
+          <a href='./resources.html'>Resources</a>
+        </span>
+      </div>
+    </nav>
+  </div>
+  <div class="wrapper">
+    <div class='Project-header'>
+      <h1>Redesigning Patook</h1>
+    </div>
+    <div class='project-container'>
+      <div class='Project-left'>
+      </div>
+      <div class='Project-body'>
+        <article>
+          <h3>Story behind the app</h3>
+          <p>Ever felt alone in the city? You’re not the only one. Between recent graduates, people who recently went through a breakup, and those new to the area, there are plenty of people who could use a friend. (Over 40,000 people moved into Los Angeles in 2016, and certainly not all of those transplants came with fully formed support networks!)</p>
+          <p>While some find it easy to leverage their personal networks to form new connections, it’s not quite so simple for everyone. For my Springboard capstone project, I chose to tackle this issue by redesigning a friend-finder mobile application.</p>
+          <p>Mobile applications such as Bumblebff, Hey! Vina, and Patook enable users to “match” with others in their area and converse to develop platonic friendships. Profiles, which include a combination of personal user photos (usually linked to Facebook) and self-written descriptions, are used as vehicles to share information and identify common goals/interests. Users enter the mile radius they would like to cast their friend search, enabling them to view users located within that radius. Upon viewing each profile, users indicate whether or not they are interested in talking to someone. Mutual interest will open up eligibility to chat together. It is up to the matched users to establish and maintain conversation and, from there, escalate to an in-person meeting. Through this process, users can find those with similar interests or hobbies and strike up a connection.</p>
+          <p>While Bumblebff and Hey! Vina only allow for same-sex friendship matching, Patook allows users the option of matching with males and/or females.</p>
+          > **Objective:**
+          > Validate the desire for a friend-finder app and create the first prototype for usability tests
+        </article>
+        <article>
+          <h3>Research and planning</h3>
+          <b>What I wanted to explore:</b>
+          <ul>
+            <li>Current friend-finder applications and their functionality/design</li>
+            <li>How people seek out and maintain new friendships</li>
+            <li>What qualities people look for when making new friends</li>
+            <li>How familiar people are with existing friend-finder applications</li>
+            <li>What may hinder someone from using a friend-finder application in the first place</li>
+            <li>Frustrations with existing friend-finder applications</li>
+            <li>What people are willing to share about themselves for the purpose of making friends</li>
+          </ul>
+          <h4>Competitors in the field</h4>
+          <img src="https://drive.google.com/open?id=1mHsTzDlxaLL4TqOvW57RAlAIK5-1gk2j" alt="Heuristics Analysis"/>
+          <p>I evaluated the most notable competitors in the field, as well as the original Patook application.</p>
+          <p>I considered the possible sources of information for evaluating Patook: Those looking to expand their friend group, the app’s current user base, and the app’s developers and team. For the time constraints of my capstone project, I chose to focus on those who felt their social circle was incomplete in some way and hoped to expand their friend group. This was the most information-rich source still specific to the friend-finder cause.</p>
+          <h4>Screener survey</h4>
+          <p>To determine interview participants, I wrote questions for a screener survey to gauge how satisfied people were with the size and quality of their social circles. Questions such as “How do you usually meet new people?” were written to identify current methods of expanding their personal network, and how much individual effort each method requires.</p>
+          <h4>User interview insights</h4>
+          <b>Common Frustrations:</b>
+          <ul>
+            <li>While surface commonalities (same hometown or heritage) help to quickly identify other commonalities, lacking common interests beyond those will limit the scope of the potential friendship.</li>
+            <li>Those with experience with friend-finder apps mentioned that they had had difficulty finding others with common interests, and that receiving responses took a while after the mutual match was first declared.</li>
+          </ul>
+          <b>Common Behaviors:</b>
+          <ul>
+            <li>Millennials are very comfortable with texting as a convenient and casual way to quickly get their thoughts across.</li>
+            <li>All confirmed that they view one-on-one interactions as more intimate, so prefer to get to know newer friends one-on-one before integrating them into a larger group.</li>
+            <li>Most people prefer in-person interactions but will use texting or phone calls to quickly plan and set their next meetup.</li>
+          </ul>
+          <b>Common Goals:</b>
+          <ul>
+            <li>Most find it fairly important overall to share common interests with friends.</li>
+            <li>While it isn’t a dealbreaker for friendships that already exist, common interests are used to quickly establish a common ground and an ever-evolving source of conversation besides regular life updates.</li>
+            <li>Most expressed excitement at the prospect of being able to meet with new people who shared interests that few of their other friends held.</li>
+            <li>Friend-finder apps are best for those who live far from their original social circle (newly moved) or who have recently changed circumstances.</li>
+          </ul>
+          <h4>Solution</h4>
+          <p>With this in mind, I set out to design an app that would focus on users’ common interests but also shine a spotlight on the interests unique to each person, in hopes that it would inspire new interests and different routes of conversation. I synthesized the feedback from my interview participants and the results from my competitive analysis to form a solution. The resulting app needed to allow power users the freedom to use the app’s nooks and crannies while remaining easy and approachable enough for first-time users to not be intimidated by the sheer scope of the app.</p>
+          <h4>Designing for the users</h4>
+          <img src="https://drive.google.com/open?id=10RqLBLmnRK7KxBW-aJNXtInCglc-a07J" alt="User Personas" />
+          <p>I created three personas that represented users’ frustrations and goals as indicated from research and interviews. My primary persona Rena is a recent graduate who has moved to Los Angeles and wants to explore her new city. She epitomizes the desire of those who have moved far from their original social circle and are searching for companions for local activities.</p>
+          <a href="https://drive.google.com/open?id=1WrJjjL6ASYOl9aWmwiCF7yUtHV6b1uoP">User Stories</a>
+          <img src="https://drive.google.com/open?id=1aF7vsgCZP8Mj2np9kRTn5CVGdbOqwFPf" alt="User Flow" />
+        </article>
+        <article>
+          <h3>Design</h3>
+          <p>iOS application, from research and ideation to prototype and usability testing</p>
+          <h4>Sketching process</h4>
+          <p>I <a href="https://docs.google.com/document/d/18gmruh4gPqIIKPmnbwX-e2BhS8A-YKWt95Ehr3TDAU0/edit?usp=sharing">sketched wireframes and flows</a>, considering what interface design patterns might be most appropriate for the target audience.</p>
+          <p>insert sketch: navigation</p>
+          <p>Based on research about how smartphone users hold their phones, I knew a bottom navigation bar would be most accessible. I sketched out a few different options for the navigation bar, but one thing stayed consistent: Tabs were ordered by priority, starting with the Mutual Match screen and Conversations screen.</p>
+          <p>[ insert sketch: onboarding ]</p>
+          <p>Users who hold their phone in one hand and use the thumb of that same hand to touch the screen would have difficulty accessing buttons at the top of the screen, so important call-to-action buttons were placed in the bottom half of each screen.</p>
+          <h4>Developing the prototype</h4>
+          <p>Generating the prototype took longer than anticipated – while I was not trying to spend too much time on the visual design aspect, I did want to ensure that the users of the first prototype received sufficient guidance through visual and textual cues. Upon creating my high-fidelity wireframes, I began putting more thought into word choice.</p>
+          <p>Most of my efforts during the sketching process were concentrated on how information would be most effectively communicated through the visuals. Keeping in mind the “call to action” I wanted users to take on each page and the hotspots most easily accessible on a user’s smartphone, I settled on a Z-formation structure for most of my pages, with a bottom navigation bar to make it convenient for thumbs.</p>
+          <h4>Validation</h4>
+          <p>I validated the design with feedback from the same participants I'd interviewed during my research process.</p>
+          <p>Prototype feedback ranged from compliments about the design’s minimalistic and “clean” look/feel to confusion surrounding some of the functionality. One section particularly confounding users was the “Use My Location” option during onboarding, as they were unsure how that button would differ from manually entering their zip code below.</p>
+          <p>I addressed these concerns by tabulating a list and prioritizing them based on ultimate functionality and purpose in the process. By doing so, I concentrated my efforts only on the essentials rather than getting distracted by feature/scope creep.</p>
+          <h4>Future</h4>
+          <p>Limited functionality in Invision: I had greater ambitions for this utility app, which were unfortunately beyond the scope of Invision’s functionality. If given the opportunity to work with a developer, I would like to implement more advanced interaction design: transition screens for swiping left-right to more clearly indicate how a user is swiping, allowing them the satisfaction that they are swiping the way they intended to, swiping up to temporarily skip a profile, and a filter for different community groups to narrow search options to only those with certain characteristics.</p>
+        </article>
+        <!-- <article>
+          <h3>Lessons Learned</h3>
+          <p>Lorem ipsum etc.</p>
+        </article> -->
+      </div>
+      <div class='Project-details'>
+        <h4>Project Details</h4>
+        <div class='Project-detail'>
+          <h5>Context</h5>
+          <span class='lead'>Capstone project for Springboard UX Design course</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Date</h5>
+          <span class='lead'>January 2018 - February 2018</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Timeframe</h5>
+          <span class='lead'>someText</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Tools</h5>
+          <span class='lead'>Adobe Photoshop, Invision</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Methods &amp; Skills</h5>
+          <span class='lead'>someText</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Role</h5>
+          <span class='lead'>Sole UX Designer</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Team Members</h5>
+          <span class='lead'>N/A</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Deliverables</h5>
+          <span class='lead'>Heuristics analysis, user personas, empathy maps, user flows, user stories, sketches, card-sorting, high-fidelity wireframes, clickable prototype, style guide, usability testing analysis</span>
+        </div>
+        <div class='Project-detail'>
+          <h5>Devices</h5>
+          <span class='lead'>iOS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

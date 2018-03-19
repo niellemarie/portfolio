@@ -1,0 +1,79 @@
+.App-container {
+}
+
+.nav-container {
+  border-bottom:1px solid #aaa;
+}
+nav {
+  margin:0 auto;
+  max-width:1280px;
+  height: 40px;
+  padding: 2.5rem 1rem;
+  display: flex;
+  align-items:center;
+}
+  .left {
+    text-align: left;
+    flex: 1;
+  }
+    .App-logo, .name {
+      display:inline-block;
+      vertical-align: middle;
+    }
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 35px;   
+    }
+    .name {
+      padding-top:-0.9rem;
+    }
+  .right {
+    text-align: right;
+    flex: 1;
+  }
+    .nav-button {
+      padding: 0.5rem 1rem;
+    }
+    .nav-button a {
+      color:#333;
+      text-decoration: none;
+    }
+    .nav-button a:hover {
+      color:#aaa;
+    }
+
+  
+    .home {
+    }
+      .intro-container {
+        max-width:650px;
+        margin: 0 auto;
+        text-align:center;
+        padding:2rem 0;
+      }
+      .intro {
+        font-size:24px;
+      }
+
+      .project-cards-container {
+        text-align: center;
+      }
+        .project-card {
+          display:inline-block;
+          vertical-align: top;
+          width: calc(100%/3);
+          padding: 1.5rem 1.5rem;
+        }
+          .project-img {
+            height:200px;
+            width:100%;
+            /* border:1px solid #333; */
+            background-color:#ddd;
+          }
+          .project-desc {
+            padding:1rem 0.5rem;
+            color:hsl(0, 0%, 28%);
+          }
+
+
+  
