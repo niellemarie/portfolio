@@ -65,10 +65,7 @@ nav {
           padding: 1.5rem 1.5rem;
         }
           .project-img {
-            height:200px;
-            width:100%;
-            /* border:1px solid #333; */
-            background-color:#ddd;
+
           }
           .project-desc {
             padding:1rem 0.5rem;
