@@ -16,7 +16,7 @@ body {
   font-kerning: normal;
   text-rendering: optimizeLegibility;
   color:#333;
-  background-color:hsl(0, 0%, 94%);
+  background-color:#fff;
 }
 
 .wrapper {
