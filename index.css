@@ -61,6 +61,7 @@ a {
 a:hover {
   color:hsl(339, 38%, 89%);
   text-decoration: underline;
+  text-decoration-color:#f3dce4;
 }
 p, li, .smallcaps {
   color:hsl(0, 0%, 30%)
