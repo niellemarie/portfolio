@@ -2,7 +2,13 @@
 }
 
 .nav-container {
-  border-bottom:1px solid #aaa;
+  position:fixed;
+  left:0;
+  right:0;
+  /* border-bottom:1px solid hsl(339, 38%, 89%); */
+  box-shadow:0 1px 3px 0 hsl(339, 38%, 89%);
+  background-color:#fff;
+  z-index: 1;
 }
 nav {
   margin:0 auto;
@@ -64,11 +70,12 @@ nav {
           width: calc(100%/3);
           padding: 1.5rem 1.5rem;
         }
-          .project-img {
-
+          .project-img img {
+            border-radius: 8px;
+            box-shadow: 1px 1px 3px 0 #888;
           }
           .project-desc {
-            padding:1rem 0.5rem;
+            padding:0rem 0.5rem;
             color:hsl(0, 0%, 28%);
           }
 

@@ -23,16 +23,16 @@
   .Project-detail {
     margin-bottom: 2rem;
   }
-  .Project-details h5 {
-    color:hsl(0, 0%, 60%);
-    letter-spacing: 1px;
+  .smallcaps {
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    font-size:0.7rem;
-    padding:0;
-    margin:0;
-    margin-bottom:0.2rem;
+    font-size:0.64em;
+    display:block;
+    /* margin-bottom:0.2rem; */
   }
   .lead {
+    display:block;
     font-size:1rem;
+    line-height:1.6;
   }
 
