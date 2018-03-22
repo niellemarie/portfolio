@@ -1,6 +1,10 @@
-.resources {
-  display:flex;
-}
-.resources-col {
-  flex: 1;
+
+
+@media screen and (min-width: 737px) {
+  .resources {
+    display:flex;
+  }
+  .resources-col {
+    flex: 1;
+  }
 }

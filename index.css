@@ -13,7 +13,7 @@ body {
     "Fira Sans", "Droid Sans", "Helvetica Neue", 
     sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", 
     "Segoe UI Symbol";
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.8;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
@@ -24,7 +24,7 @@ body {
 .wrapper {
   max-width:1280px;
   margin:0 auto;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   padding-top:4rem;
 }
 h1, h2, h3, h4, h5, .smallcaps {
@@ -53,23 +53,60 @@ h5 {
   font-size: 1.25em
 }
 
+object {
+  margin:0;
+  padding:0;
+}
+
+.nav-container {
+  width:100%;
+  height:90px;
+  position:fixed;
+  /* border-bottom:1px solid hsl(339, 38%, 89%); */
+  box-shadow:0 1px 3px 0 hsl(339, 38%, 89%);
+  background-color:#fff;
+  z-index: 1;
+}
 
 a {
   text-decoration: none;
   color:#be6f8b;
 }
+
 a:hover {
   color:hsl(339, 38%, 89%);
   text-decoration: underline;
   text-decoration-color:#be6f8b;
 }
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
 p, li, .smallcaps {
   color:hsl(0, 0%, 30%)
+}
+
+ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+li::before {
+  content: "•"; 
+  color: #be6f8b;
+  padding-right:0.3rem;
+  vertical-align: baseline;
 }
 
 img {
   width: 100%;
 }
+
 blockquote {
   padding:0;
   margin:0;
@@ -80,5 +117,36 @@ blockquote {
   font-size:1.25em;
 }
 
-@media screen and (min-width: 1025px) {
+.footer-container {
+  width:100%;
+  height:180px;
+}
+
+.button {
+  border: 1px solid #be6f8b;
+  border-radius: 35px;
+  padding: 0.1rem 1rem;
+  margin: 0.5rem 1rem;
+  display: inline-block;
+}
+.button:hover {
+  text-decoration: none;
+  background-color:hsl(339, 38%, 79%);
+  color:white;
+  border: 1px solid hsl(339, 38%, 79%);
+}
+
+@media screen and (min-width: 737px) {
+  body {
+    font-size:18px;
+  }
+  .nav-container {
+    height:65px;   
+  }
+  .wrapper {
+    max-width:1280px;
+    margin:0 auto;
+    padding: 2rem 2rem;
+    padding-top:4rem;
+  }
 }

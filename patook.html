@@ -19,44 +19,26 @@
   <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./index.css">
-  <link rel="stylesheet" type="text/css" href="./app.css">
   <link rel="stylesheet" type="text/css" href="./project.css">
-  <link rel="stylesheet" type="text/css" href="./resources.css">
-  <link rel="stylesheet" type="text/css" href="./about.css">
 </head>
 
 <body>
-  <div class="nav-container">
-    <nav>
-      <div class="left">
-        <!-- <img src={logo} class="App-logo" alt="logo" /> -->
-        <span class="name">
-          <a href='./index.html'>Danielle Dayto</a>
-        </span>
-      </div>
-      <div class="right">
-        <span class="nav-button">
-          <a href='./about.html'>About</a>
-        </span>
-        <span class="nav-button">
-          <a href="./resume.pdf">Resume</a>
-        </span>
-        <span class="nav-button">
-          <a href='./resources.html'>Resources</a>
-        </span>
-      </div>
-    </nav>
-  </div>
+    <object class='nav-container' data='./nav.html'></object>
+
   <div class="wrapper">
     <div class='Project-header'>
       <h1>Redesigning Patook</h1>
     </div>
     <div class='project-container'>
+      <div class='project-nav'>
+        <h5>Outline</h5>
+        <a href='#story'>Story behind the app</a>
+      </div>
       <div class='Project-left'>
       </div>
       <div class='Project-body'>
         <article>
-          <h3>Story behind the app</h3>
+          <h3><span class='anchor' id='story'></span>Story behind the app</h3>
           <p>Ever felt alone in the city? You’re not the only one. Between recent graduates, people who recently went through a breakup, and those new to the area, there are plenty of people who could use a friend. (Over 40,000 people moved into Los Angeles in 2016, and certainly not all of those transplants came with fully formed support networks!)</p>
           <p>While some find it easy to leverage their personal networks to form new connections, it’s not quite so simple for everyone. For my Springboard capstone project, I chose to tackle this issue by redesigning a friend-finder mobile application.</p>
           <p>Mobile applications such as Bumblebff, Hey! Vina, and Patook enable users to “match” with others in their area and converse to develop platonic friendships. Profiles, which include a combination of personal user photos (usually linked to Facebook) and self-written descriptions, are used as vehicles to share information and identify common goals/interests. Users enter the mile radius they would like to cast their friend search, enabling them to view users located within that radius. Upon viewing each profile, users indicate whether or not they are interested in talking to someone. Mutual interest will open up eligibility to chat together. It is up to the matched users to establish and maintain conversation and, from there, escalate to an in-person meeting. Through this process, users can find those with similar interests or hobbies and strike up a connection.</p>
@@ -150,7 +132,7 @@
         </article> -->
       </div>
       <div class='Project-details'>
-        <h5>Project Details</h5>
+        <h5>Details</h5>
         <div class='Project-detail'>
           <span class='smallcaps'>Context</span>
           <span class='lead'>Capstone project for Springboard UX Design course</span>
