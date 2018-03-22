@@ -61,10 +61,12 @@ a {
 a:hover {
   color:hsl(339, 38%, 89%);
   text-decoration: underline;
+  text-decoration-color:#be6f8b;
 }
 p, li, .smallcaps {
   color:hsl(0, 0%, 30%)
 }
+
 img {
   width: 100%;
 }
