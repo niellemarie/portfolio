@@ -3,9 +3,12 @@ nav {
   padding: 1rem 1rem;
   align-items:center;
 }
-  .name {
+  .nav-name {
     display:block;
     margin-bottom: 0.5rem;
+  }
+  .nav-name a:hover {
+    text-decoration: none;
   }
   .left {
     text-align: center;
@@ -37,7 +40,7 @@ nav {
       text-align: left;
       flex: 1;
     }
-      .name {
+      .nav-name {
         margin-left:1rem;
         margin-bottom: 0;
       }
