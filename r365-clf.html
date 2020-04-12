@@ -56,7 +56,6 @@
         <a href='#objective'>Objective</a><br />
         <a href='#sales'>Sales Forecasting</a><br />
         <a href='#labor'>Labor Forecasting</a><br />
-        <a href='#implementation'>Implementation</a><br />
         <a href='#validation'>Validation</a>
       </div>
       <div class='Project-left'>
@@ -70,12 +69,13 @@
         </article>
         <article>
           <h3>Process</h3>
-          <p>The ultimate goal for our web scheduling application was a smart scheduling system, where managers could forecast hourly sales and labor needs based on past sales and anticipated events. After we finished work on the web scheduling application, we moved onto ideating and sketching for this smart scheduling system.</p>
-          <p></p>
+          <p>The ultimate goal for our web scheduling application was a smart scheduling system - a powerful predictive tool to identify labor costs. While a forecast based on historical data won't provide perfectly accurate results, it would give managers valuable insights and help them make essential decisions about how to allocate their resources. After we finished work on the web scheduling application, we moved onto ideating and sketching for this smart scheduling system.
+          <p>Our smart scheduling system would generate predictions based on past sales and anticipated events. </p>
         </article>
         <article>
           <h3><span class='anchor' id='sales'></span>Sales Forecasting</h3>
-          <p>R365 took information from customers' point of sales system for accounting purposes. We knew that it would be extremely valuable for customers to be able to use this information as a point of reference for forecasts. I included the following features in my designs:</p>
+          <p>As an accounting/operations software, R365 integrated with customers' point of sales system. The information pulled from the POS would be a valuable point of reference for forecasts, so that managers could identify shifts in sales amounts as they occurred throughout the day.</p>
+          <p>I included the following features in my designs:</p>
           <ul>
             <li>A way for managers to add context to sales. Each day might have a coupon, special promotion, and/or an event - which in turn would impact sales. <a href="./img/r365/clf-wf1.png"/>Early wireframes</a> allowed managers to 'flag' certain weeks, but testing revealed that this was insufficient without descriptor text explaining why a week was flagged. I ended up incorporating <b>tags</b>.</li>
             <li>Weather information, which was important for restaurant locations dealing with snow or other extreme conditions.</li>
@@ -83,49 +83,41 @@
         </article>
         <article>
           <h3><span class='anchor' id='labor'></span>Labor Forecasting</h3>
-          <p>We enabled store and district managers to pull from their forecasted sales to create labor projections for future weeks. We heard from customers of their need to consider different types of labor hours:
+          <p>We enabled store and district managers to pull from their forecasted sales to create labor projections for future weeks. Labor calculations are not always linear, so this required a three-pronged approach:</p>
+          <ul>
+            <li>A matrix for admins/managers to designate how much staff their location required, based on sales data</li>
+            <li>A weekly breakdown of labor forecast, with projections from our custom sales forecast tool</li>
+            <li>Updating the Scheduling web app to include each week's projected labor hours</li>
+          </ul>
+            <h4>Building the Matrix</h4>
+            <p>We heard from customers of their need to consider different types of labor hours:</p>
             <ul>
               <li>Variable Labor: Servers, hosts, or cooks; hours depended on estimated sales.</li>
-              <li>Fixed Labor: Managerial staff or maintenance; preset based on day.</li>
-            </ul></p>
-          <h4>Information architecture</h4>
-          <p>We developed and ran <b>open cardsorts</b> with previous survey participants to identify the most effective sitemap for the site. In analyzing the results of our cardsorts, we arrived at the following conclusions:</p>
-          <ul>
-            <li>53% of participants paired "mentoring" and "networking" activities together. 33% classified "networking" under Community or related sections, while the remaining 14% admitted they didn't know what networking meant.</li>
-            <li>40% categorized "projects" and "opportunities" together.</li>
-            <li>46% wanted recent information presented together as a continuous feed, rather than having it separated out across multiple categories.</li>
-          </ul>
-          <h4>User stories</h4>
-          <p>We wrote <b>user stories</b> to <a href="https://docs.google.com/spreadsheets/d/1P5G7nH6NQueMZkvH5qwOxIIlMRmTPC2frrD9aG6PWK4/edit#gid=0">detail the community's functionality</a>. Our developer found it very helpful to have these high-level requirements written out.</p>
-          <p>Mapping out these user stories into their various <b>epics</b> helped us get a better idea of the scope of our project. Our team discussed how valuable each piece played in the overall B-STEM community experience, ultimately helping to assemble the MVP.</p>
-          <h4>User scenarios</h4>
-          <p>We illustrated how our various personas might use the community. Writing these <b>user scenarios</b> was an exercise in empathy, testing how well we understood how users would interact with the B-STEM community throughout their daily lives.</p>
-        </article>
-        <article>
-          <h3><span class='anchor' id='design'></span>Design</h3>
-          <h4>Sketching process</h4>
-          <p>While my teammates worked on wireframing the profiles and registration process, I did some whiteboarding to visualize two of our main features: Projects and Opportunities. The user stories were the foundation for my sketches. My main challenge was condensing the information-dense sections and making them bite-sized for younger audiences.</p>
-          <h4>Wireframes</h4>
-          <p>I created wireframes using Sketch. "Opportunities" and "Projects" pages alike needed to be easy to skim but quick to filter, so that users could mindlessly browse if they were very open to ideas or drill down on the exact set of opportunities that fit what they were searching for.</p>
-          <p>We were asked to focus primarily on building out content requirements during this stage, which I hadn't anticipated. It turned out to be an interesting exercise in product ownership - having to anticipate the exact fields a user would expect to see on a typical "post project" screen.</p>
-          <h4>Feedback</h4>
-          <p>During feedback, the lead stakeholder brought up the following points about the Project Posting wireframes:</p>
-            <ul>
-              <li>Members would want to see statistics for projects/opportunities, such as views/likes</li>
-              <li>Project owners would want the option to disable comments</li>
-              <li>Project owners and the community would want to flag comments</li>
-              <li>Members would want to forward projects that caught their eye to other members or friends not part of the community, and be able to have a collection of these liked projects</li>
-              <li>Members would want an easy way to access projects that they had favorited</li>
+              <li>Fixed Labor: Managerial staff or maintenance. Managers knew exactly how many hours were needed and on what days of the week.</li>
             </ul>
-          <p>Ultimately, it was decided that these features were "nice to haves" and would not be included in the MVP.</p>
-          <h4><span class='anchor' id='prototype'></span>Developing the prototype</h4>
-          <blockquote></blockquote>
-          <h3><span class='anchor' id='validation'></span>Validation</h3>
+            <p>WHAT IS THE MATRIX lalala. Users would ideally only need to build the matrix once, and add to it when creating new job codes.
+            <img src="./img/r365/clf-pr2.png"/> <img src="./img/r365/clf-pr3.png"/>
+            <h4>Updating the Forecast</h4>
+            <p>My designs had the following focal points:</p>
+            <ul>
+              <li>System-generated information visible but in the background. We wanted users to understand that they could rely on the system's default forecast, but we would always defer to their knowledge.</li>
+              <li>Ability to edit forecast. Those with the right security clearance could edit the forecast, but a higher-up would need to approve it. I <a href="./img/r365/clf-wf2.jpg"/>ideated</a> with the product owner on ways to visualize changes made by the user. We ended up using <a href="./img/r365/clf-pr1.png"/>slight changes in typography</a> to represent changes.</li>
+              <li>Ability to reset the forecast to the R365 default.</li>
+            </ul>
+            <img src="./img/r365/clf-pr1.png"/>
+            <h4>Visibility on Web Scheduler</h4>
+            <p>The addition of Custom Labor Forecast meant we needed to make some tweaks to our Scheduling web application. Variable Labor hours would need to be indicated on the schedule, so that scheduling managers  would know if they'd scheduled the appropriate number of hours for each job. I explored different ways to flag these time intervals:</p>
+            <ul>
+              <li>Time intervals needing attention listed the labor hour variance in red.</li>
+              <li>Correctly scheduled time intervals were marked with a green checkmark.</li>
+            </ul>
+            <img src="./img/r365/clf-pr4.jpg" />
+            <img src="./img/r365/clf-pr5.jpg" />
+
+        </article>
+        <h3><span class='anchor' id='validation'></span>Validation</h3>
+        <p>Adoption rate of 200 accounts, with at least 5 customers publishing a week's worth of forecasting data to more than location at a time..</p>
           <h4>Reflection and next steps</h4>
-          <p>I really enjoyed working with a team of designers, from the research phase to iterating on wireframes. Having multiple sets of eyes on my designs was very helpful to the process.</p>
-          <p>I was most excited when writing the user stories for the Projects and Opportunities features. Being present during that crucial moment of shaping the product was a real treat.</p>
-          <p>Plenty of feature ideas came up after we wrote those first user stories, so we had to make some tough calls to distinguish between "must haves" and "nice to haves". It was challenging when the team wasn't 100% in alignment on these. We had to be firm on the product's identity and the audience we were building the community for.</p>
-          <p>Overall, I loved being able to contribute to a product that felt so engaging, and hope to find more opportunities where I can do the same!</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
@@ -136,15 +128,15 @@ Lastly (and one of the most important)… what did you learn throughout the proc
         <h5>Details</h5>
         <div class='Project-detail'>
           <span class='smallcaps'>Context</span>
-          <span class='lead'>First project for Restaurant365, a company developing accounting/operations software for restaurants</span>
+          <span class='lead'>Operations project for R365, for restaurants to optimize their labor spend and streamline the scheduling process</span>
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Date</span>
-          <span class='lead'>July 2018 - May 2019</span>
+          <span class='lead'>January 2019 - October 2019</span>
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Tools</span>
-          <span class='lead'>Pen/paper, Sketch, Invision, Aha!, Jira</span>
+          <span class='lead'>Pen/paper, Sketch, Invision, Aha!, Jira, Abstract</span>
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Role</span>
@@ -152,7 +144,7 @@ Lastly (and one of the most important)… what did you learn throughout the proc
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Deliverables</span>
-          <span class='lead'>Sketches, wireframes, lo-fi prototype, UI, interactive prototype</span>
+          <span class='lead'>Sketches, wireframes, UI, interactive prototype</span>
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Device</span>
