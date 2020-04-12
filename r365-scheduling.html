@@ -66,34 +66,29 @@
           <h3><span class='anchor' id='story'></span>Overview</h3>
           <p>I was the sole UX designer for Restaurant365's shift scheduling web app. R365 wanted to update the look & feel of its existing scheduling software, give it more robust features, and bring it up to speed with more modern tools.</p>
           <h3><span class='anchor' id='objective'></span>Objective:</h3>
-          <blockquote>Identify needs of restaurant managers in scheduling their employees, build scheduling system to meet those needs, and validate system functionality with managers of various restaurant sizes.</blockquote>
+          <blockquote>Enable restaurant managers to schedule the right amount of hours, at the appropriate times, adjust quickly when necessary, and easily identify gaps in their scheduling. Identify needs of restaurant managers in scheduling their employees, build scheduling system to meet those needs, and validate system functionality with managers of various restaurant sizes.</blockquote>
         </article>
         <article>
           <h3>Process</h3>
-          <p>I worked closely with the product owner and engineering team, from grooming user stories to prototyping and testing the usability of new features. We started out by conducting interviews with current clients to understand their restaurants' needs. From there, we identified the pain points our users were facing when using the existing scheduler.</p>
-          <p>We began ideating and sketching for a smart scheduling system, where managers could forecast hourly labor needs based on past sales and anticipated events.</p>
+          <p>I worked closely with the product owner and engineering team, from grooming user stories to prototyping and testing the usability of new features. Most of the discovery had already been completed by the time I was assigned to this project, but I was able to participate in a few client interviews to understand restaurants' needs. The product owner brought me up to speed on what had already been learned from customers, so we could get straight to the ideation process. From there, we identified the pain points our users were facing when using the existing scheduler.</p>
+          <p>We began ideating and sketching for a smart scheduling system, where managers could forecast hourly labor needs based on past sales and anticipated events. </p>
         </article>
         <article>
           <h3><span class='anchor' id='research'></span>Design</h3>
-          <p>Discovery had already been completed by the time I was assigned to this project. The product owner brought me up to speed on what had already been learned from customers, so we could get straight to the ideation process.</p>
+          <p></p>
           <b>What we wanted to explore:</b>
           <ul>
-            <li>Potential users' current participation in online communities</li>
-            <li>The methods they used to learn more about their fields/industries of interest</li>
-            <li>Experiences with mentorship and collaborative learning</li>
-            <li>Resources used during career searching, and opportunities for new resources</li>
+            <li>Current users' understanding and usage of the existing scheduling application</li>
           </ul>
-          <h4>User survey</h4>
-          <p>Since our potential user base included females of all ages, wording the survey appropriately for each target group was challenging. Our screener questions directed each set of participants to a different section: younger students, older students, and professionals.</p>
-          <p>We brainstormed distribution channels for the survey. In addition to past B-STEM program participants, we considered existing online community groups (Slack, Discord, Facebook), offline community groups (local Girl Scouts troops), and word of mouth (accessing our family/friends's networks).</p>
-          <p>We received 145 results from the survey, a great starting point for collecting information. Our <a href="https://docs.google.com/document/d/1qygZA7DfQRnX-m4wWYZR-5DHyG8a6WDH-j7ZUPdGDm0/edit?usp=sharing">survey analysis</a> helped us understand our target audience. The <a href="https://docs.google.com/document/d/1YFIalLLc5Y37UC3O8lISwJ9tg4WzL6TIsjuocWr-AcA/edit?usp=sharing">responses received</a> from our survey enabled us to fine-tune our user interview questions and ask more substantial, hard-hitting questions. We asked more specific questions to those who were willing to offer more insight by participating in user interviews.</p>
-          <blockquote>When it comes to business opportunities and STEM education, what are the barriers and frustrations experienced by female students and professionals?</blockquote>
+          <h4>Original R365 scheduling experience</h4>
+          <p>The existing scheduling app only showed a weekly schedule. Users found it difficult to quickly make or create shifts, since selecting a particular shift took you to a different page. Doing so would mean you lose the context of other shifts and what’s already created. It was impossible to quickly identify overtime hours. There was a lot of information given upfront but everything was given equal weight, which made it harder to understand. One of the most painful sounding pieces of feedback we received:</p>
+          <blockquote>Some managers chose to use an Excel sheet rather than create their schedules in the R365 system.</blockquote>
           <h4>User interview insights</h4>
           <p>
           <b>Pain points:</b>
           <ul>
             <li>Inability to quickly adjust shift times and respond to changes in their organization like staff turnover</li>
-            <li></li>
+            <li>Too many job codes leading to mistakenly removing irrelevant shifts</li>
             <li></li>
           </ul><br />
           <b>Common behaviors:</b>
@@ -110,14 +105,23 @@
             <li>More inclusive environments to encourage women to participate</li>
           </ul>
           <h3><span class='anchor' id='solution'></span>Solution</h3>
-          <blockquote</blockquote>
-          <p>Tentative "how might we" statements guided our design:
-            <ul>
-              <li>How might we bring together girls of different demographics to comfortably collaborate?</li>
-              <li>How might we attract females to start using the community?</li>
-              <li>How might we encourage girls to participate in the community and share their findings?</li>
-            </ul></p>
-          <h4>Information architecture</h4>
+          <p>Wireframing</p>
+          <img src="./img/r365/sch-wf1.png"/>
+          <P>NEED TO UPDATE ACROBAT SO I CAN PULL OUT THE PDF</P>
+          <p>Early version of the scheduler attempted to solve some of these issues, but still struggled with hierarchy and information density.</p>
+          <p>I concentrated on providing a legible, easy-to-parse schedule that users would be able to quickly scan to find the information they wanted:</p>
+          <ul>
+            <li>Each employee’s job</li>
+            <li>The number of hours they worked</li>
+            <li>The number of shifts they were scheduled for that week.</li>
+          </ul>
+          <p>I layered in important information so that someone can find it intuitively even if it is not immediately obvious on the page.</p>
+          <p>First on our list for the new scheduling experience was a daily view so that managers could visualize their day hour-by-hour. We also implemented drag-and-drop functionality to update shift times or quickly assign a shift to an available employee. (NEED TO CREATE A SCREENGRAB) I also advocated for a quick filter view, so managers could quickly find employees with a given job code and their current schedules.</p>
+          <p>My <a href="./img/r365/sch-wf2.jpg">early iterations</a> followed Material Design more closely and displayed shadows under each of the shifts. However, testing with real scheduling data revealed that managers often created many shifts to ensure sufficient coverage, which these early versions were not displaying properly. I decided to give overlapping shifts their own lines upon clicking on the “Multiple Shifts” line, using a carat as an affordance.</p>
+          <p> In addition, we received feedback that it was important to see responsibilities associated with jobs at a glance, so I ended up including that on each shift card. Information like an employee’s star rating or the catering site that they might be assigned to for that shift were visible only when clicking on a specific shift.</p>
+          <p>We introduced Departments, an attribute of Job Codes, so that administrators could organize their jobs by department. Each department could have its own daily Labor % and Sales per Labor Hour goals. This would enable managers in charge of a specific department (back of house or front of house, bar manager) to view and publish the shift for their department without worrying about potentially destructive actions like accidentally updating another department’s. Also restricts the view so you’re not looking at employees with job codes that have nothing to do with your department.</p>
+          <h4>Final</h4>
+          <img src="./img/r365/sch-pr1.jpg"/>
           <p>We developed and ran <b>open cardsorts</b> with previous survey participants to identify the most effective sitemap for the site. In analyzing the results of our cardsorts, we arrived at the following conclusions:</p>
           <ul>
             <li>53% of participants paired "mentoring" and "networking" activities together. 33% classified "networking" under Community or related sections, while the remaining 14% admitted they didn't know what networking meant.</li>
@@ -151,10 +155,7 @@
           <blockquote></blockquote>
           <h3><span class='anchor' id='validation'></span>Validation</h3>
           <h4>Reflection and next steps</h4>
-          <p>I really enjoyed working with a team of designers, from the research phase to iterating on wireframes. Having multiple sets of eyes on my designs was very helpful to the process.</p>
-          <p>I was most excited when writing the user stories for the Projects and Opportunities features. Being present during that crucial moment of shaping the product was a real treat.</p>
-          <p>Plenty of feature ideas came up after we wrote those first user stories, so we had to make some tough calls to distinguish between "must haves" and "nice to haves". It was challenging when the team wasn't 100% in alignment on these. We had to be firm on the product's identity and the audience we were building the community for.</p>
-          <p>Overall, I loved being able to contribute to a product that felt so engaging, and hope to find more opportunities where I can do the same!</p>
+          <p>It was extremely satisfying to see the dev team's ongoing process for Scheduling. It really came to life. Being able to click on and interact with the things I'd designed was incredibly fulfilling. The next stp will be seeing customers (especially for our larger groups) interact with it and understanding/implementing their feedback.</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
