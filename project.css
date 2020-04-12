@@ -17,6 +17,9 @@
   .Project-body article {
     margin-bottom:4rem;
   }
+  .Project-body img {
+    border-radius:3px;
+  }
 
 .Project-details {
 }
