@@ -54,9 +54,8 @@
         <h5>Outline</h5>
         <a href='#story'>Overview</a><br />
         <a href='#objective'>Objective</a><br />
+        <a href='#discovery'>Discovery</a><br />
         <a href='#design'>Design</a><br />
-        <a href='#prototype'>Prototype</a><br />
-        <a href='#implementation'>Implementation</a><br />
         <a href='#validation'>Validation</a>
       </div>
       <div class='Project-left'>
@@ -64,104 +63,93 @@
       <div class='Project-body'>
         <article>
           <h3><span class='anchor' id='story'></span>Overview</h3>
-          <p>I was the sole UX designer for Restaurant365's shift scheduling web app. R365 wanted to update the look & feel of its existing scheduling software, give it more robust features, and bring it up to speed with more modern tools.</p>
+          <p>One of my first projects for R365 was to redesign the shift scheduling experience. Our scheduling web application was used by restaurant managers and assistant managers - anyone who might prepare a restaurant's weekly schedule and send it out to employees. While functional, the original application wasn't the most responsive; making changes to a given schedule was a painful experience. R365 wanted to update the look & feel of its existing scheduling software, give it more robust features, and bring it up to speed with more modern tools.</p>
           <h3><span class='anchor' id='objective'></span>Objective:</h3>
-          <blockquote>Enable restaurant managers to schedule the right amount of hours, at the appropriate times, adjust quickly when necessary, and easily identify gaps in their scheduling. Identify needs of restaurant managers in scheduling their employees, build scheduling system to meet those needs, and validate system functionality with managers of various restaurant sizes.</blockquote>
+          <blockquote>Enable restaurant managers to schedule shifts at the appropriate times, easily identify gaps in their scheduling, and adjust quickly when necessary.</blockquote>
         </article>
         <article>
           <h3>Process</h3>
-          <p>I worked closely with the product owner and engineering team, from grooming user stories to prototyping and testing the usability of new features. Most of the discovery had already been completed by the time I was assigned to this project, but I was able to participate in a few client interviews to understand restaurants' needs. The product owner brought me up to speed on what had already been learned from customers, so we could get straight to the ideation process. From there, we identified the pain points our users were facing when using the existing scheduler.</p>
-          <p>We began ideating and sketching for a smart scheduling system, where managers could forecast hourly labor needs based on past sales and anticipated events. </p>
+          <p>Most of the discovery process had already been completed by the time I was assigned to this project, but I participated in a few client interviews. These interviews helped me understand the existing gaps between our application's capabilities and restaurants' needs.</p>
+          <p>From there, I began sketching and wireframing possibilities. Starting from the first set of wireframes, I conducted usability tests to learn more about the information restaurant managers needed to know upfront. I worked closely with the product owner and engineering team throughout the project, from grooming user stories to prototyping and testing the usability of new features.</p>
         </article>
         <article>
-          <h3><span class='anchor' id='research'></span>Design</h3>
-          <p></p>
-          <b>What we wanted to explore:</b>
-          <ul>
-            <li>Current users' understanding and usage of the existing scheduling application</li>
-          </ul>
+          <h3><span class='anchor' id='discovery'></span>Discovery</h3>
           <h4>Original R365 scheduling experience</h4>
-          <p>The existing scheduling app only showed a weekly schedule. Users found it difficult to quickly make or create shifts, since selecting a particular shift took you to a different page. Doing so would mean you lose the context of other shifts and what’s already created. It was impossible to quickly identify overtime hours. There was a lot of information given upfront but everything was given equal weight, which made it harder to understand. One of the most painful sounding pieces of feedback we received:</p>
-          <blockquote>Some managers chose to use an Excel sheet rather than create their schedules in the R365 system.</blockquote>
+          <p>The existing scheduling app was functional but very rigid. The application provided a lot of information upfront, but all of this information was given equal weight, making it harder to comprehend or differentiate. Overtime hours were indicated per employee, but this was lost amongst a list of dozens of employees.</p>
+          <figure><a href="./img/r365/sch-orig1.png"><img src="./img/r365/sch-orig1.png" /></a><figcaption>The existing scheduling application</figcaption></figure>          
+          <p>Users found it difficult to quickly make or create shifts, since selecting a particular shift took you to a different page. This process meant they lost the visual context of other shifts already created.</p>
           <h4>User interview insights</h4>
-          <p>
+          <p>Our interviews clarified current users' understanding and usage of the existing scheduling application. One of the most painful pieces of feedback we received about the existing app was:</p>
+          <blockquote>Some managers chose to use an Excel sheet with multiple tabs and handle their schedule manually, rather than create their schedules in the R365 system.</blockquote><br>
           <b>Pain points:</b>
           <ul>
-            <li>Inability to quickly adjust shift times and respond to changes in their organization like staff turnover</li>
-            <li>Too many job codes leading to mistakenly removing irrelevant shifts</li>
-            <li></li>
-          </ul><br />
-          <b>Common behaviors:</b>
+            <li>Inability to quickly adjust shift times and respond to day-to-day changes such as employee turnover</li>
+            <li>Confusion with job codes leading to mistakenly removing irrelevant shifts</li>
+            <li>Information overload</li>
+            <li>Special events were displayed all day, not hour-specific</li>
+          </ul><br>
+          <b>Stated user needs:</b>
           <ul>
-            <li>Resilience in the face of male-dominated fields</li>
-            <li>Seeking out support from female-focused professional organizations</li>
-            <li>Looking for validation/feedback from other women professionals to gain insights</li>
-          </ul><br />
-          <b>Common goals:</b>
-          <ul>
-            <li>Encouraging girls to pursue STEM roles, starting in school and continuing throughout their proessional career</li>
-            <li>Providing young women confidence and skills at a young age</li>
-            <li>Removing "imposter syndrome" that many women develop during their career</li>
-            <li>More inclusive environments to encourage women to participate</li>
+            <li>"Blackout days" to effectively plan for holidays</li>
+            <li>Ample coverage for customer demand</li>
+            <li>Identifying available employees during last-minute cancellations</li>
+            <li>Providing staff access to up-to-date schedules from anywhere</li>
           </ul>
-          <h3><span class='anchor' id='solution'></span>Solution</h3>
-          <p>Wireframing</p>
-          <img src="./img/r365/sch-wf1.png"/>
-          <P>NEED TO UPDATE ACROBAT SO I CAN PULL OUT THE PDF</P>
-          <p>Early version of the scheduler attempted to solve some of these issues, but still struggled with hierarchy and information density.</p>
-          <p>I concentrated on providing a legible, easy-to-parse schedule that users would be able to quickly scan to find the information they wanted:</p>
+          <h3><span class='anchor' id='design'></span>Design</h3>
+          <p>I began ideating and sketching to find a clean, elegant solution. I concentrated on providing a legible, easy-to-parse schedule that users would be able to quickly scan to find the information they wanted:</p>
           <ul>
+            <li>Restaurant location</li>
+            <li>Week of schedule</li>
             <li>Each employee’s job</li>
             <li>The number of hours they worked</li>
-            <li>The number of shifts they were scheduled for that week.</li>
+            <li>The number of shifts they were scheduled for that week</li>
           </ul>
-          <p>I layered in important information so that someone can find it intuitively even if it is not immediately obvious on the page.</p>
-          <p>First on our list for the new scheduling experience was a daily view so that managers could visualize their day hour-by-hour. We also implemented drag-and-drop functionality to update shift times or quickly assign a shift to an available employee. (NEED TO CREATE A SCREENGRAB) I also advocated for a quick filter view, so managers could quickly find employees with a given job code and their current schedules.</p>
-          <p>My <a href="./img/r365/sch-wf2.jpg">early iterations</a> followed Material Design more closely and displayed shadows under each of the shifts. However, testing with real scheduling data revealed that managers often created many shifts to ensure sufficient coverage, which these early versions were not displaying properly. I decided to give overlapping shifts their own lines upon clicking on the “Multiple Shifts” line, using a carat as an affordance.</p>
-          <p> In addition, we received feedback that it was important to see responsibilities associated with jobs at a glance, so I ended up including that on each shift card. Information like an employee’s star rating or the catering site that they might be assigned to for that shift were visible only when clicking on a specific shift.</p>
-          <p>We introduced Departments, an attribute of Job Codes, so that administrators could organize their jobs by department. Each department could have its own daily Labor % and Sales per Labor Hour goals. This would enable managers in charge of a specific department (back of house or front of house, bar manager) to view and publish the shift for their department without worrying about potentially destructive actions like accidentally updating another department’s. Also restricts the view so you’re not looking at employees with job codes that have nothing to do with your department.</p>
-          <h4>Final</h4>
-          <img src="./img/r365/sch-pr1.jpg"/>
-          <p>We developed and ran <b>open cardsorts</b> with previous survey participants to identify the most effective sitemap for the site. In analyzing the results of our cardsorts, we arrived at the following conclusions:</p>
-          <ul>
-            <li>53% of participants paired "mentoring" and "networking" activities together. 33% classified "networking" under Community or related sections, while the remaining 14% admitted they didn't know what networking meant.</li>
-            <li>40% categorized "projects" and "opportunities" together.</li>
-            <li>46% wanted recent information presented together as a continuous feed, rather than having it separated out across multiple categories.</li>
-          </ul>
-          <h4>User stories</h4>
-          <p>We wrote <b>user stories</b> to <a href="https://docs.google.com/spreadsheets/d/1P5G7nH6NQueMZkvH5qwOxIIlMRmTPC2frrD9aG6PWK4/edit#gid=0">detail the community's functionality</a>. Our developer found it very helpful to have these high-level requirements written out.</p>
-          <p>Mapping out these user stories into their various <b>epics</b> helped us get a better idea of the scope of our project. Our team discussed how valuable each piece played in the overall B-STEM community experience, ultimately helping to assemble the MVP.</p>
-          <h4>User scenarios</h4>
-          <p>We illustrated how our various personas might use the community. Writing these <b>user scenarios</b> was an exercise in empathy, testing how well we understood how users would interact with the B-STEM community throughout their daily lives.</p>
-        </article>
-        <article>
-          <h3><span class='anchor' id='design'></span>Design</h3>
-          <h4>Sketching process</h4>
-          <p>While my teammates worked on wireframing the profiles and registration process, I did some whiteboarding to visualize two of our main features: Projects and Opportunities. The user stories were the foundation for my sketches. My main challenge was condensing the information-dense sections and making them bite-sized for younger audiences.</p>
-          <h4>Wireframes</h4>
-          <p>I created wireframes using Sketch. "Opportunities" and "Projects" pages alike needed to be easy to skim but quick to filter, so that users could mindlessly browse if they were very open to ideas or drill down on the exact set of opportunities that fit what they were searching for.</p>
-          <p>We were asked to focus primarily on building out content requirements during this stage, which I hadn't anticipated. It turned out to be an interesting exercise in product ownership - having to anticipate the exact fields a user would expect to see on a typical "post project" screen.</p>
-          <h4>Feedback</h4>
-          <p>During feedback, the lead stakeholder brought up the following points about the Project Posting wireframes:</p>
-            <ul>
-              <li>Members would want to see statistics for projects/opportunities, such as views/likes</li>
-              <li>Project owners would want the option to disable comments</li>
-              <li>Project owners and the community would want to flag comments</li>
-              <li>Members would want to forward projects that caught their eye to other members or friends not part of the community, and be able to have a collection of these liked projects</li>
-              <li>Members would want an easy way to access projects that they had favorited</li>
-            </ul>
-          <p>Ultimately, it was decided that these features were "nice to haves" and would not be included in the MVP.</p>
-          <h4><span class='anchor' id='prototype'></span>Developing the prototype</h4>
+          <h4>From wireframes to final UI</h4>
+          <figure><img src="./img/r365/sch-wf3.png"/><figcaption>Where it all started</figcaption></figure>
+          <p>My early <a href="./img/r365/sch-wf4.pdf"/>wireframes</a> struggled to establish a sense of hierarchy. The information available on-screen was legible, but everything was presented too equally.</p>
+          <p>I indicated an employee's lack of availability throughout the week by shading the cell in gray. Testing showed that this pattern was easily recognizable by restaurant managers and administrators, so I kept it for all of my iterations.</p>
+          <figure><img src="./img/r365/sch-wf1.png"/><figcaption>I began to incorporate Material Design elements as we proceeded with usability testing</figcaption></figure>
+
+          <figure><img src="./img/r365/sch-wf2.jpg"/><figcaption>A more polished version included a dropshadow under shifts, to indicate they were clickable</figcaption></figure>
+
+          <p>I aimed to layer important information onto the page so that someone could locate it quickly, even if it wasn't immediately obvious. I used <a href="./img/r365/sch-settings.png">a side sheet</a> to house options that weren't so vital to display on the main scheduling page.</p>
+          <img src="./img/r365/sch-settings2.png">
+          <p>We received feedback that it was important to see responsibilities associated with jobs at a glance, so I ended up including those on each shift card. On the other hand, information like an employee’s star rating or a shift's catering site were visible only when clicking on a specific shift.</p>
+          <img src="./img/r365/sch-catering.png">
+
+          <p>Over time, I updated the UI to account for metrics like forecasted labor hours and variances. 
+
+          <figure><img src="./img/r365/sch-pr1.jpg"/><figcaption>The final iteration, which was developed in React</figcaption></figure>
+
+          <h4>Segmenting the scheduling experience</h4>
+          <blockquote>"A bartender might not matter to a certain manager. They might only care about employees in the back of house."</blockquote>
+          <p>We'd heard from our interviews that confusion arose from lack of segmentation when many job codes were in play. A bar manager might publish a schedule while a back-of-house manager was still working on their schedule for the week.</p>
+          <p>To mitigate this confusion, we introduced Departments - an attribute of Job Codes. Administrators could therefore organize their jobs by department, such as <b>Front of House</b> and <b>Back of House</b>.</p>
+          <figure><img src="./img/r365/sch-dep2.png"><figcaption></figcaption></figure>
+          <p>Each department was allowed its own daily Labor % and Sales per Labor Hour goals. Each manager could filter their schedule to restrict their view to only their department's employees. This meant managers could view and publish the shift for their specific department without worrying about potentially destructive actions like accidentally updating another department’s. </p>
+          <figure><img src="./img/r365/sch-dep1.png"><figcaption></figcaption></figure>
+
+          <h4>Color palette for shifts</h4>
+          <p>Unexpectedly, I was asked to implement a new color palette for shifts. Administrators could assign one of 10 preselected colors to each of their organization's job codes. Our existing color palette was a combination of bright bold colors and muted darks. Everything was very saturated, which certainly didn't help with the information overload experienced by users.</p>
+          <img src="./img/r365/sch-colors1.png">
+          <p>On the scheduler itself, there was no way to visually differentiate an assigned shift from an unassigned shift or a shift currently clicked. I created a set of 10 colors 
+          desaturated for assigned, medium saturation for unassigned, and currently clicked would be darker variants.</p>
+          <img src="./img/r365/sch-colors2.png">
+    
+          <h4>Designing interactions</h4>
+          <p>One of my goals for the new scheduling experience was a more manageable shift creation/update process. With the previous scheduling application, it was not possible for managers to quickly change a shift's hours or the employee it was assigned to. My new design allowed managers to create a shift upon clicking on the grid.</p>
+          <video controls src="./vid/r365/sch-drag.mp4"></video>
+          <p>Drag-and-drop functionality would allow managers to update shift times on the fly or quickly change which employee a shift was assigned to. I also advocated for a quick filter view, so managers could quickly find employees with a given job code and their current schedules.</p>
+          
           <blockquote></blockquote>
           <h3><span class='anchor' id='validation'></span>Validation</h3>
-          <p>The Scheduling app was first demoed to dozens of potential customers at MURTEC, one of the biggest conferences for the restaurant technology industry. Fortunately, it received very positive feedback. One restaurant group's CEO was excited to get it rolled out to all of his stores.</p>
+          <p>The Scheduling app was first demoed to potential customers at MURTEC, one of the biggest conferences for the restaurant technology industry. Fortunately, it received very positive feedback. One restaurant group's CEO immediately let us know that he was excited to get it rolled out to all of his stores.</p>
+          <blockquote>"Scheduling for managers and team members is clear and simple."</blockquote>
           <h4>Reflection and next steps</h4>
-          <p>It was extremely satisfying to see the dev team's ongoing process for Scheduling. It really came to life. Being able to click on and interact with the things I'd designed was incredibly fulfilling. The next stp will be seeing customers (especially for our larger groups) interact with it and understanding/implementing their feedback.</p>
+          <p>It was a pleasant shock to see how far the scheduling application ended up after all of those iterations. Watching the web development team's progress with Scheduling was extremely satisfying, especially being able to click on and interact with the things I'd designed.</p>
+          <p>I have to admit that I was not confident with my UI skills when I started this project, but I'm happy with how it turned out after all those rounds of iteration. I attribute this to the product owner and our VP of Product, who really pushed to fine-tune the UI. They challenged me to take this product far past what the legacy application had done.</p>
+          <p>This experience also taught me not to get too attached to a feature. Throughout the design process, I worked closely with the product owner to identify what features were necessary for our MVP. Ultimately, some of the things I included in the first set of wireframes were not developed, like splitting shifts to assign to multiple employees.</p> 
         </article>
-        <!-- <article>
-What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
-Lastly (and one of the most important)… what did you learn throughout the process?
-        </article> -->
       </div>
       <div class='Project-details'>
         <h5>Details</h5>
