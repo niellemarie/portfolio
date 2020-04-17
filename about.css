@@ -25,16 +25,18 @@
     margin-top:3rem;
     display: flex;
   }
-    .About-image, .About-blurb {
-      flex: 1;
+    .About-blurb {
+      flex: 2;
     }
     .About-image {
       position:relative;
+      flex: 1;
     }
       .About-img {
         background-color:#ddd;
         width:100%;
         vertical-align: top;
+        border-radius:4px;
       }
       .About-contact {
         text-align: right;
