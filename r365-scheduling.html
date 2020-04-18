@@ -126,29 +126,30 @@
           <p>We'd heard from our interviews that confusion arose from lack of segmentation when many job codes were in play. A bar manager might publish a schedule while a back-of-house manager was still working on their schedule for the week.</p>
           <p>To mitigate this confusion, we introduced Departments - an attribute of Job Codes. Administrators could therefore organize their jobs by department, such as <b>Front of House</b> and <b>Back of House</b>.</p>
           <figure><img src="./img/r365/sch-dep2.png"><figcaption></figcaption></figure>
-          <p>Each department was allowed its own daily Labor % and Sales per Labor Hour goals. Each manager could filter their schedule to restrict their view to only their department's employees. This meant managers could view and publish the shift for their specific department without worrying about potentially destructive actions like accidentally updating another department’s. </p>
+          <p>Each department could set its own daily sales and labor metrics. Each manager could filter their schedule to restrict their view to only their department's employees. This meant managers could view and publish the shift for their specific department without worrying about potentially destructive actions like accidentally updating another department’s. </p>
           <figure><img src="./img/r365/sch-dep1.png"><figcaption></figcaption></figure>
 
           <h4>Color palette for shifts</h4>
-          <p>Unexpectedly, I was asked to implement a new color palette for shifts. Administrators could assign one of 10 preselected colors to each of their organization's job codes. Our existing color palette was a combination of bright bold colors and muted darks. Everything was very saturated, which certainly didn't help with the information overload experienced by users.</p>
-          <img src="./img/r365/sch-colors1.png">
-          <p>On the scheduler itself, there was no way to visually differentiate an assigned shift from an unassigned shift or a shift currently clicked. I created a set of 10 colors 
-          desaturated for assigned, medium saturation for unassigned, and currently clicked would be darker variants.</p>
-          <img src="./img/r365/sch-colors2.png">
+          <p>Administrators could assign one of 10 preselected colors to each of their organization's job codes. These colors would be reflected on shifts created on the scheduler. Our existing color palette was a combination of bright bold colors and muted darks. This combination certainly didn't help with the information overload experienced by users.</p>
+          <figure><img src="./img/r365/sch-colors1.png"><figcaption>The existing color palette used for shifts</figcaption></figure>
+          <p>At the beginning of the project, I had been told that we were keeping the original scheduler's color palette. After several rounds of wireframes, I was asked to create a new color palette for shifts. As someone who didn't have much experience with UI, this endeavor excited and terrified me.</p>
+          <p>On the scheduler itself, there was no way to visually differentiate an assigned shift from an unassigned shift or a shift currently clicked. I created a set of 11 colors - with variants for assigned shifts (pastel-like and desaturated), unassigned shifts (medium saturation), and currently clicked shifts (the darkest of each set).</p>
+          <figure><img src="./img/r365/sch-colors2.png"><figcaption>Updated color palette</figcaption></figure>
     
           <h4>Designing interactions</h4>
-          <p>One of my goals for the new scheduling experience was a more manageable shift creation/update process. With the previous scheduling application, it was not possible for managers to quickly change a shift's hours or the employee it was assigned to. My new design allowed managers to create a shift upon clicking on the grid.</p>
+          <p>One of my goals for the new scheduling experience was a more manageable shift creation/update process. With the previous scheduling application, it was not possible for managers to quickly change a shift's hours or the employee it was assigned to. My new design allowed managers to create a shift by clicking on the grid.</p>
           <video controls src="./vid/r365/sch-drag.mp4"></video>
           <p>Drag-and-drop functionality would allow managers to update shift times on the fly or quickly change which employee a shift was assigned to. I also advocated for a quick filter view, so managers could quickly find employees with a given job code and their current schedules.</p>
           
           <blockquote></blockquote>
           <h3><span class='anchor' id='validation'></span>Validation</h3>
-          <p>The Scheduling app was first demoed to potential customers at MURTEC, one of the biggest conferences for the restaurant technology industry. Fortunately, it received very positive feedback. One restaurant group's CEO immediately let us know that he was excited to get it rolled out to all of his stores.</p>
+          <p>The Scheduling app was first demoed to potential customers at MURTEC, one of the biggest conferences for the restaurant technology industry. It received glowing reviews from those who saw the demo. One restaurant group's CEO immediately let us know that he was excited to get it rolled out to all of his stores.</p>
           <blockquote>"Scheduling for managers and team members is clear and simple."</blockquote>
           <h4>Reflection and next steps</h4>
-          <p>It was a pleasant shock to see how far the scheduling application ended up after all of those iterations. Watching the web development team's progress with Scheduling was extremely satisfying, especially being able to click on and interact with the things I'd designed.</p>
-          <p>I have to admit that I was not confident with my UI skills when I started this project, but I'm happy with how it turned out after all those rounds of iteration. I attribute this to the product owner and our VP of Product, who really pushed to fine-tune the UI. They challenged me to take this product far past what the legacy application had done.</p>
+          <p>Watching the web development team's progress with Scheduling was extremely satisfying, especially being able to click on and interact with the things I'd designed.</p>
           <p>This experience also taught me not to get too attached to a feature. Throughout the design process, I worked closely with the product owner to identify what features were necessary for our MVP. Ultimately, some of the things I included in the first set of wireframes were not developed, like splitting shifts to assign to multiple employees.</p> 
+          <p>I have to admit that I was not confident with my UI skills when I started this project, but I'm happy with how it turned out after all those rounds of iteration. I had been afraid to stray too far from the original scheduling app's design, but the product owner and our VP of Product really challenged me to fine-tune the UI. I'm deeply appreciative of their support, especially seeing how it ended up after all of my iterations.</p>
+         
         </article>
       </div>
       <div class='Project-details'>
