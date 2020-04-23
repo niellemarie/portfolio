@@ -1,5 +1,4 @@
 .Project-header {
-  text-align:center;
   width:100%;
   margin:4rem 0;
 }
@@ -41,9 +40,9 @@
 
 @media screen and (min-width: 737px) {
   .Project-header {
-    text-align:center;
-    width:100%;
-    margin:4rem 0;
+    text-align:left;
+    width:55%;
+    margin: 4rem auto;
   }
   .project-container {
     display:flex;
