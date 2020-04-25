@@ -40,8 +40,8 @@
 
 @media screen and (min-width: 737px) {
   .Project-header {
-    text-align:left;
-    width:55%;
+    text-align:center;
+    width:80%;
     margin: 4rem auto;
   }
   .project-container {

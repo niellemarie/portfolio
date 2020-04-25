@@ -47,7 +47,7 @@
 
   <div class="wrapper">
     <div class='Project-header'>
-      <h1>Designing a custom operations forecast tool for restaurant managers</h1>
+      <h1>Designing a mobile application for scheduling managers</h1>
     </div>
     <div class='project-container'>
       <div class='project-nav'>
@@ -63,69 +63,62 @@
       <div class='Project-body'>
         <article>
           <h3><span class='anchor' id='story'></span>Overview</h3>
-          <p>What do they need to accomplish and in what context? The mobile experience, where restaurant managers may approve/deny employee requests, address conflicts, and view upcoming schedules from their phones.</p>
-          <p>Restaurant managers found the scheduling feature essential to their daily course of business, but found the experience frustrating. I listened to our customers' concerns, taking note to diagnose the underlying issue and not just the symptoms.</p>
+          <p>While a restaurant manager could handle most of their scheduling duties on R365's <a href="./r365-scheduling.html">web application</a>, our team understood that a manager couldn't spend their entire day in front of a desktop computer. Our next mission was to develop a mobile application to allow them to accomplish scheduling-related tasks while on the go. The mobile app would be where restaurant managers approved/denied employee requests, addressed conflicts, and viewed upcoming schedules, as well as identify the effects of changes to an employee's schedule.</p>
+          <!--<p>We hoped to simplify the manager approval process for employees’ requests, from time off to unavailability and shift trades. From a business perspective, our clients wanted to streamline communication and promote employee engagement.</p>-->
           <h3><span class='anchor' id='objective'></span>Objective:</h3>
-          <blockquote>The ultimate goal was to deliver a smart scheduling system - a powerful predictive tool to identify labor costs.</blockquote>
+          <blockquote>Provide a seamless experience across web and mobile for restaurant managers, providing context to decisions that need to be made.</blockquote>
         </article>
         <article>
           <h3>Process</h3>
-          <p>While a forecast based on historical data won't provide perfectly accurate results, it would give managers valuable insights, helping them make essential decisions regarding how to allocate their labor resources. I started with ideating and sketching for this smart scheduling system.</p>
-          <img src="./img/r365/clf-flow.jpg">
-          <p>The smart scheduling system would generate predictions based on past sales and anticipated events. Enable upper-level management to create forecasts of their store's sales based on past sales data, considering coupons, weather, and upcoming events; leverage projected sales data to forecast their labor needs on a weekly basis; and allow store managers to use their expertise to staff their store.
-          help them understand how to predict demand and inflows of customers</p>
-        </article>
-        <article>
-          <h3><span class='anchor' id='sales'></span>Sales Forecasting</h3>
-          <p>As an accounting/operations software, R365 integrated with customers' point of sales system. The information pulled from the POS would be a valuable point of reference for forecasts, so that managers could identify shifts in sales amounts as they occurred throughout the day.</p>
-          <p>I included the following features in my designs:</p>
-          <ul>
-            <li>A way for managers to add context to sales. Each day might have a coupon, special promotion, and/or an event - which in turn would impact sales. <a href="./img/r365/clf-wf1.png"/>Early wireframes</a> allowed managers to 'flag' certain weeks, but testing revealed that this was insufficient without descriptor text explaining why a week was flagged. I ended up incorporating <b>tags</b>.</li>
-            <li>Weather information, which was important for restaurant locations dealing with snow or other extreme conditions.</li>
-          </ul>
-        </article>
-        <article>
-          <h3><span class='anchor' id='labor'></span>Labor Forecasting</h3>
-          <p>My <a href="./img/r365/clf-wf.pdf">first wireframes</a> for Labor Forecasting used a "wizard" to set up fixed and variable labor.</p>
-          <p>We enabled store and district managers to pull from their forecasted sales to create labor projections for future weeks. Labor calculations are not always linear, so this required a three-pronged approach:</p>
-          <ul>
-            <li>A matrix for admins/managers to designate how much staff their location required, based on sales data</li>
-            <li>A weekly breakdown of labor forecast, with projections from our custom sales forecast tool</li>
-            <li>Updating the Scheduling web app to include each week's projected labor hours</li>
-          </ul>
-            <h4>Building the Matrix</h4>
-            <p>We heard from customers of their need to consider different types of labor hours:</p>
-            <ul>
-              <li>Variable Labor: Servers, hosts, or cooks; hours depended on estimated sales.</li>
-              <li>Fixed Labor: Managerial staff or maintenance. Managers knew exactly how many hours were needed and on what days of the week.</li>
-            </ul>
-            <p>WHAT IS THE MATRIX lalala. Users would ideally only need to build the matrix once, and add to it when creating new job codes.</p>
-            <p>Early version for smart scheduling - NEED TO UPDATE ACROBAT</p>
-            <img src="./img/r365/clf-pr2.png"/> <img src="./img/r365/clf-pr3.png"/>
-            <h4>Updating the Forecast</h4>
-            <p>SHIFT BIDDING - used to be shift drop</p>
-            <p>My designs had the following focal points:</p>
-            <ul>
-              <li>System-generated information visible but in the background. We wanted users to understand that they could rely on the system's default forecast, but we would always defer to their knowledge.</li>
-              <li>Ability to edit forecast. Those with the right security clearance could edit the forecast, but a higher-up would need to approve it. I <a href="./img/r365/clf-wf2.jpg"/>ideated</a> with the product owner on ways to visualize changes made by the user. We ended up using <a href="./img/r365/clf-pr1.png"/>slight changes in typography</a> to represent changes.</li>
-              <li>Ability to reset the forecast to the R365 default.</li>
-            </ul>
-            <img src="./img/r365/clf-pr1.png"/>
-            <h4>Visibility on Web Scheduler</h4>
-            <p>The addition of Custom Labor Forecast meant we needed to make some tweaks to our Scheduling web application. Variable Labor hours would need to be indicated on the schedule, so that scheduling managers  would know if they'd scheduled the appropriate number of hours for each job. I explored different ways to flag these time intervals:</p>
-            <ul>
-              <li>Time intervals needing attention listed the labor hour variance in red.</li>
-              <li>Correctly scheduled time intervals were marked with a green checkmark.</li>
-            </ul>
-            <img src="./img/r365/clf-pr4.jpg" />
-            <img src="./img/r365/clf-pr5.jpg" />
-            <p>Managers would still need to review their work and determine how much labor they truly needed throughout the day. Since actual sales won't necessarily line up with each day's sales forecast, it naturally follows that projected labor generated by the labor matrix won't be exact. Managers instead will need to adjust to optimize their labor throughout the day.
+          <p>Since we had garnered so much information from our web scheduling interviews, most of my time on this project was focused on the user interface.</p>
+          <p>The product owner stressed that managers should be freed to be in the front of house as much as possible, since they were unable to interact with customers in the back office. We understood manager priorities to be the following: identifying when overtime hours would be triggered (in an effort to avoid such instances), retaining authority over scheduling, and keeping employees informed of any changes to their schedule. My goal was to surface only metrics relevant to these priorities, in a way that would be accessible and actionable.</p>
+          <p>Design-wise, I started with our Shift Offer process since it was the most complex of the requests. We thought there might be a need to view each of the employees' schedules.</p>
+          <p>Design critique. Helped to have a second pair of eyes on it. Lead UX Designer helped steer. Later on, I spent a good amount of time coordinating with our mobile development team, fine-tuning the design and ensuring consistency between our Android and iOS applications.</p>
 
         </article>
+        <article>
+          <h3><span class='anchor' id='Design'></span>Design</h3>
+          <p>The next step in my process was synthesizing what we knew about our users' experience.</p>
+          <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a more laissez-faire approach to enforcing this. Only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>
+          <p>I moved on to the Requests List, a summary view of the requests submitted by all employees belonging to that restaurant location. I wanted a safeguard against accidental approvals/denials, so I restricted action to the detailed request pages. Managers could not take any actions on the list view. They would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
+
+          Changing the process of Shift Claims. Change verbiage of "Claim Shift" -> Request Shift, on the employee side. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. We decided to streamline this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Reducing the potential points of failure in this process required minimizing these interactions.
+
+
+
+
+          <figure><img src="./img/r365/mob-badges.png"><figcaption>An early iteration of Request List showed approved and denied requests in the same list as pending requests</figcaption></figure>
+          <p>Filters for Request List were an important one on my list. A manager might have access to multiple locations' requests, or they might only want to view request from a certain time period.</p>
+          <figure><img src="./img/r365/mob-filter.png"><figcaption>The first and last drafts of my Filters page</figcaption></figure>
+          <p>I wanted to display requests details pages so they were easy to read.</p>
+          <figure><img src="./img/r365/mob-tor.png"><figcaption></figcaption></figure>
+          An earlier version of the Time Off Request Detail screen had used the header "Other Staff Time Off", which was not as specific and implied that it was all staff from that location. We wanted to make it clear that only the employees who shared job codes with the original requesting employee would be listed here, so it was changed to "Similar Time Off Requests".
+
+          <figure><img src="./img/r365/mob-trade.png"><figcaption></figcaption></figure>
+          <p>They say to pick your battles, and this was one of the ones I chose to advocate for. The product owner wanted to include labels like "original hours" and "net change resulting hours", which were highly descriptive but not at all colloquial. I opted to drop the technical labels.</p>
+          <p>The details of the specific shifts being traded were of secondary concern, so I treated them accordingly in my design.</p>
+
+          <p>We removed the star rating since the product owner admitted it was a 'nice to have' and that some restaurants might not use the rating system at all.</p>
+
+          <p>Archived views and how to indicate original schedule compared to the requested one. Ended up displaying them above and below, instead of side by side. Archived view was also not possible to display the previous schedule, so we only displayed the approved one (or that the request had been denied).</p>
+          <figure><img src="./img/r365/mob-avail.png"><figcaption></figcaption></figure>
+          <p>Indicating the 'before' and 'after' states. I hadn't wanted to make the schedule redundant and only indicate the changed times, but limited horizontal real estate so I chose to display them vertically. Color to indicate differences in an employee's schedule, whether more hours of availability (green) or less (red).</p>
+
+
+
+        </article>
+        <article>
+          <h3><span class='anchor' id='labor'></span>Implementation</h3>
+          <p>I worked closely with the mobile development team for this project in order to fully understand our capabilities and restrictions from a back-end point of view. For example, some of the features the product manager and I wanted to implement would have required too heavy of a lift from our backlogged back-end team, so we came up with a workaround or chose not to display those items in the sections it would most affect.</p>
+          [screenshot of requests already submitted by employee; Complicated for the back-end without creating more fields in the database, so we chose to forego the number on the archived views.]
+            <p>We had to reconsider one of our existing processes, as it was troubling some clients. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. SHIFT BIDDING - used to be shift drop</p>
+            <p>Change is always difficult. Recognizing this, we empowered our customer success department with internal learning guidelines, including an in-app walkthrough of the new features. We hoped this would alleviate some of the pains normally associated with onboarding. Providing this quick-start guide as documentation for our end users as well as our internal support folks would help restaurant managers get the most value out of the new application.</p>
+          
+        </article>
         <h3><span class='anchor' id='validation'></span>Validation</h3>
-        <p>We received positive feedback when demoing the forecasting prototypes with users. Labor Forecasting in particular landed well with them. Once it was ready for rollout to our customers, we witnessed an adoption rate of 200 accounts, with at least 5 customers publishing a week's worth of forecasting data to multiple locations at a time.</p>
-        <h4>Reflection and next steps</h4>
-        <p>Working on operations forecasting was an interesting look at a manager's processes. I enjoyed the idea of helping restaurant managers get the most out of the data available to them. While it is a helpful tool for managers, it should still be where only a percentage of their time is spent. Projections can help, but the important thing is for them to use the tool quickly and return to their other duties.</p>
+        <p></p>
+        <h4>Reflection</h4>
+        <p></p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
@@ -156,7 +149,7 @@ Lastly (and one of the most important)… what did you learn throughout the proc
         </div>
         <div class='Project-detail'>
           <span class='smallcaps'>Device</span>
-          <span class='lead'>Desktop computer</span>
+          <span class='lead'>Android/iOS</span>
         </div>
       </div>
     </div>

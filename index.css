@@ -48,7 +48,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3.052em
+  /*font-size: 3.052em*/
+  font-size: 2.6em
 }
 h2 {
   font-size: 2.441em
@@ -127,10 +128,10 @@ video {
 
 blockquote {
   padding:0;
-  margin:3rem 2rem;
-  border-left: 10px solid #be6f8b;
+  margin:1rem 2rem;
+  border-left: 8px solid #be6f8b;
   padding-left: 1rem;
-  font-size:1.25em;
+  font-size:1.2em;
 }
 
 figcaption {

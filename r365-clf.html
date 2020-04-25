@@ -72,6 +72,7 @@
           <p>While a forecast based on historical data won't provide perfectly accurate results, it would give managers valuable insights, helping them make essential decisions regarding how to allocate their labor resources. I started with ideating and sketching for this smart scheduling system.</p>
           <img src="./img/r365/clf-flow.jpg">
           <p>The smart scheduling system would generate predictions based on past sales and anticipated events. It would allow upper-level management to create forecasts of their stores' sales based on past sales and upcoming events; leverage projected sales data to forecast their labor needs on a weekly basis; and enable managers to use their expertise to staff their restaurant.</p>
+          <p>The major challenge with this project was breaking these powerful features into digestible chunks for users. As I designed each one, I considered ways to simplify the process and reduce confusion. I wanted to make the product understandable rather than cluttered.</p>
         </article>
         <article>
           <h3><span class='anchor' id='sales'></span>Sales Forecast</h3>
@@ -114,25 +115,27 @@
             <p>Administrators could "smooth out" their sales and labor forecast so there weren't sudden jumps between hours. For example, it would be unwise for a manager to schedule 4 employees for one hour, 7 employees the next, and back to 4 the third hour.</p> I <a href="./img/r365/clf-wf2.jpg"/>ideated</a> with the product owner on ways to visualize changes made by the user.</p>
             <figure><img src="./img/r365/clf-grid1.png"><figcaption>A variant where updated cells were automatically flagged with red</figcaption></figure>
             <figure><img src="./img/r365/clf-grid2.png"><figcaption>A variant where updated cells were highlighted in yellow and font color changed to blue</figcaption></figure>
-            <p>I puzzled over these options, wanting to make the changes slight enough that the user could easily identify the difference, but not so loud as to concern them that something had necessarily gone wrong. Another question was how to visually indicate that a user couldn't edit something - like a total or fixed value. I figured these would most easily be accomplished through text style changes, rather than colors that might not have the desired significance to an operations manager. I ended up representing updated cells using italics, and fixed values with bold.</p>
+            <p>I puzzled over these options, wanting to make the changes slight enough that the user could easily identify the difference, but not so loud as to concern them that something had necessarily gone wrong. Another question was how to visually indicate that a user couldn't edit something - like a total or fixed value. I figured these would most easily be accomplished through <b>text style changes</b>, rather than colors that might not have the desired significance to an operations manager. I ended up representing updated cells using italics, and fixed values with bold.</p>
             <img src="./img/r365/clf-pr1.png"/>
             <h4>Visibility on Web Scheduler</h4>
             <p>The addition of Custom Labor Forecast meant we needed to make some tweaks to our Scheduling web application. Variable Labor hours would need to be indicated on the schedule, so that scheduling managers would know if they'd scheduled the appropriate number of hours for each job. I explored different ways to flag these time intervals.</p>
-            <p>I first started by including all of the quantitative metrics: projected hours, scheduled hours, and the variances. One idea was to add a status icon to indicate a variance, or lack thereof. This was appealed to the minimalist in me - a visual indicator for completion and saved the user from having to do unnecessary mental math. My final version was even more streamlined:</p>
+            <p>I first started by including all of the quantitative metrics: projected hours, scheduled hours, and their <b>variances</b>. Out of all of these metrics, variances were the most important, saving the user from having to do unnecessary mental math. They were also the most understandable metric to take action on. One idea was to add a status icon to indicate a variance, or lack thereof. This visual indicator for completion appealed to the minimalist in me. My final version was even more streamlined:</p>
             <ul>
               <li>Forecasted labor hours and the labor variance for each hour. I left out the redundant "scheduled hours" metric entirely.</li>
               <li>Time intervals needing attention listed the labor hour variance in red.</li>
               <li>Correctly scheduled time intervals were marked with a green checkmark.</li>
             </ul>
-            <img src="./img/r365/clf-pr4.jpg" />
-            <img src="./img/r365/clf-pr5.jpg" />
-            <p>Managers would still need to review their work and determine how much labor they truly needed throughout the day. Since actual sales won't necessarily line up with each day's sales forecast, it naturally follows that projected labor generated by the labor matrix won't be exact. Managers instead will need to adjust to optimize their labor throughout the day.
+            <figure><img src="./img/r365/clf-pr5.jpg" /><figcaption>The default view only showeda high-level overview of the labor forecast and variance, and the expanded view (pictured) showed variances for each of the job codes</figcaption></figure>
+            <p>Managers would still need to review their work and determine how much labor they truly needed throughout the day. Since actual sales won't necessarily line up with each day's sales forecast, it naturally follows that projected labor generated by the labor matrix won't be exact. Managers would need to adjust accordingly to optimize their labor throughout the day.</p>
 
         </article>
         <h3><span class='anchor' id='validation'></span>Validation</h3>
         <p>We received positive feedback when demoing the forecasting prototypes with users. Labor Forecast in particular landed well with them. Once it was ready for rollout to our customers, we witnessed an adoption rate of 200 accounts, with at least 5 customers publishing a week's worth of forecasting data to multiple locations at a time.</p>
-        <h4>Reflection and next steps</h4>
-        <p>Working on operations forecasting was an interesting look at a manager's processes. I enjoyed the idea of helping restaurant managers get the most out of the data available to them. While it is a helpful tool for managers, it should still be where only a percentage of their time is spent. Projections can help, but the important thing is for them to use the tool quickly and return to their other duties.</p>
+        <p>This MVP offered hourly forecasting, but it quickly became clear that our users would benefit from more precise forecasts based on 15-minute intervals. I worried that this might end up looking too crowded, but the metrics involved were only in the two- or three-digit range.</p>
+        <figure><img src="./img/r365/clf-pr4.jpg" /><figcaption>15-minute interval forecast</figcaption></figure>
+        <h4>Reflection</h4>
+        <p>Working on operations forecasting was an interesting look at a manager's processes. Trying to understand and organize everything was a challenge, but I enjoyed the idea of helping restaurant managers get the most out of the data available to them.. I hadn't realized just how much data could be surfaced to operations managers.</p>
+        <p>My major contribution to this product was simplifying it so managers would only have to spend a small percentage of their time forecasting. It was most important for managers to complete their weekly forecasts quickly but effectively, allowing them to return to their myriad other duties.</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
