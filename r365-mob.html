@@ -79,10 +79,18 @@
         <article>
           <h3><span class='anchor' id='Design'></span>Design</h3>
           <p>The next step in my process was synthesizing what we knew about our users' experience.</p>
-          <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a more laissez-faire approach to enforcing this. Only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>
+          <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a hands-off approach to enforcing this, so only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>
           <p>I moved on to the Requests List, a summary view of the requests submitted by all employees belonging to that restaurant location. I wanted a safeguard against accidental approvals/denials, so I restricted action to the detailed request pages. Managers could not take any actions on the list view. They would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
 
-          Changing the process of Shift Claims. Change verbiage of "Claim Shift" -> Request Shift, on the employee side. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. We decided to streamline this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Reducing the potential points of failure in this process required minimizing these interactions.
+          <p>We had to reconsider one of our existing processes, as it was troubling  clients. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. The product owner decided our best move was to alter this paradigm and put the onus on the employee attempting to drop a shift.</p>
+          <p>We toyed with different wording. On the employee side, "Claim Shift" became "Request Shift". For the managers, we toyed with "Shift Bidding" but ended with "Shift Offer", to reflect the actual request made by the original employee, while "Shift Bid" only refers to the claim request.</p>
+
+          https://blog.vcssoftware.com/what-are-the-benefits-of-shift-bidding
+
+          <figure><a href="./img/r365/mob-flow1.png" target=_blank><img src="./img/r365/mob-flow1.png"></a><figcaption></figcaption></figure>
+          <p>We decided to streamline this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Time is money, so we wanted to save the managers time of having to handle these shift drops. Reducing the potential points of failure in this process required minimizing these interactions.</p>
+          
+          <figure><a href="./img/r365/mob-flow2.png" target=_blank><img src="./img/r365/mob-flow2.png"></a><figcaption></figcaption></figure>
 
 
 
@@ -111,14 +119,14 @@
           <h3><span class='anchor' id='labor'></span>Implementation</h3>
           <p>I worked closely with the mobile development team for this project in order to fully understand our capabilities and restrictions from a back-end point of view. For example, some of the features the product manager and I wanted to implement would have required too heavy of a lift from our backlogged back-end team, so we came up with a workaround or chose not to display those items in the sections it would most affect.</p>
           [screenshot of requests already submitted by employee; Complicated for the back-end without creating more fields in the database, so we chose to forego the number on the archived views.]
-            <p>We had to reconsider one of our existing processes, as it was troubling some clients. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. SHIFT BIDDING - used to be shift drop</p>
+            
             <p>Change is always difficult. Recognizing this, we empowered our customer success department with internal learning guidelines, including an in-app walkthrough of the new features. We hoped this would alleviate some of the pains normally associated with onboarding. Providing this quick-start guide as documentation for our end users as well as our internal support folks would help restaurant managers get the most value out of the new application.</p>
           
         </article>
         <h3><span class='anchor' id='validation'></span>Validation</h3>
         <p></p>
         <h4>Reflection</h4>
-        <p></p>
+        <p>Mobile Scheduling is another project where I'm fairly proud of the end UI - attributable to the iterations and focus on a clean, clear design. I'd wondered if designing for mobile might feel too constrained, but I actually appreciated how it forced me to consider the use for each button and line of text. Is this truly necessary? Can we get by without it? If we don't include this information here, would someone understand everything around it?</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
