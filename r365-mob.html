@@ -54,9 +54,9 @@
         <h5>Outline</h5>
         <a href='#story'>Overview</a><br />
         <a href='#objective'>Objective</a><br />
-        <a href='#sales'>Sales Forecasting</a><br />
-        <a href='#labor'>Labor Forecasting</a><br />
-        <a href='#validation'>Validation</a>
+        <a href='#design'>Design</a><br />
+        <a href='#implementation'>Implementation</a><br />
+        <a href='#reflection'>Reflection</a>
       </div>
       <div class='Project-left'>
       </div>
@@ -66,7 +66,7 @@
           <p>While a restaurant manager could handle most of their scheduling duties on R365's <a href="./r365-scheduling.html">web application</a>, our team understood that a manager couldn't spend their entire day in front of a desktop computer. Our next mission was to develop a mobile application to allow them to accomplish scheduling-related tasks while on the go. The mobile app would be where restaurant managers approved/denied employee requests, addressed conflicts, and viewed upcoming schedules, as well as identify the effects of changes to an employee's schedule.</p>
           <!--<p>We hoped to simplify the manager approval process for employees’ requests, from time off to unavailability and shift trades. From a business perspective, our clients wanted to streamline communication and promote employee engagement.</p>-->
           <h3><span class='anchor' id='objective'></span>Objective:</h3>
-          <blockquote>Provide a seamless experience across web and mobile for restaurant managers, providing context to decisions that need to be made.</blockquote>
+          <blockquote>Deliver a seamless experience across web and mobile for restaurant managers, providing context to decisions that need to be made.</blockquote>
         </article>
         <article>
           <h3>Process</h3>
@@ -76,26 +76,26 @@
             <li>retaining authority over scheduling, and</li>
             <li>keeping employees informed of any changes to their schedule. </li>
           </ul>
-          <p>Design-wise, I started with our Shift Offer process since it was the most complex of the requests. We thought there might be a need to view each of the employees' schedules, so I started by sketching possible visualizations of these schedules. As we progressed, it became more apparent which information was most necessary for a lightweight manager scheduling MVP.</p>
-          <p>I received helpful feedback on my design from my colleague, also a UX designer. Later on, I spent time working closely with the mobile development team, fine-tuning the design and ensuring consistency between our Android and iOS applications.</p>
+          <p>Design-wise, I started with our Shift Offer process since it was the most complex of the requests. We thought there might be a need to view each of the employees' schedules, so I sketched possible visualizations of these schedules. As we progressed, it became more apparent which information was most necessary for a lightweight manager scheduling MVP.</p>
+          <p>I received helpful feedback on my design from my colleague, also a UX designer. I also spent time working closely with the mobile development team, fine-tuning the design and ensuring consistency between our Android and iOS applications.</p>
 
         </article>
         <article>
           <h3><span class='anchor' id='Design'></span>Design</h3>
-          <p>The next step in my process was synthesizing what we knew about our users' experience.</p>
-          <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a hands-off approach to enforcing this, so only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>
-          <p>I moved on to the Requests List, a summary view of the requests submitted by all employees belonging to that restaurant location. I wanted a safeguard against accidental approvals/denials, so I restricted action to the detailed request pages. Managers could not take any actions on the list view. From the list view, they would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
-          <p>We had to reconsider one of our existing processes, as it was troubling  clients. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. The product owner decided our best move was to alter this paradigm and put the onus on the employee attempting to drop a shift.</p>
+          <!--<p>The next step in my process was synthesizing what we knew about our users' experience.</p>
+          <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a hands-off approach to enforcing this, so only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>-->
+          
+          <p>One of our existing processes was troubling clients, so the first step was to reconsider it. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. The product owner decided our best move was to alter this paradigm and put the onus on the employee attempting to drop a shift.</p>
           <p>We toyed with different wording. On the employee side, "Claim Shift" became "Request Shift". For the managers, we toyed with "Shift Bidding" but ended with "Shift Offer", to reflect the actual request made by the original employee, while "Shift Bid" only refers to the claim request.</p>
 
-          https://blog.vcssoftware.com/what-are-the-benefits-of-shift-bidding
+          <!--https://blog.vcssoftware.com/what-are-the-benefits-of-shift-bidding-->
 
           <figure><a href="./img/r365/mob-flow1.png" target=_blank><img src="./img/r365/mob-flow1.png"></a><figcaption></figcaption></figure>
-          <p>We decided to streamline this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Time is money, so we wanted to save the managers time of having to handle these shift drops. Reducing the potential points of failure in this process required minimizing these interactions.</p>
+          <p>We streamlined this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Time is money, so we wanted to save the managers time of having to handle these shift drops. Reducing the potential points of failure in this process required minimizing these interactions.</p>
           
           <figure><a href="./img/r365/mob-flow2.png" target=_blank><img src="./img/r365/mob-flow2.png"></a><figcaption></figcaption></figure>
 
-
+          <p>The Requests List itself was a summary view of the requests submitted by all employees belonging to that restaurant location. I wanted a safeguard against accidental approvals/denials, so I restricted action to the detailed request pages. Managers could not take any actions on the list view. From the list view, they would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
 
 
           <figure><img src="./img/r365/mob-badges.png"><figcaption>An early iteration of Request List showed approved and denied requests in the same list as pending requests</figcaption></figure>
@@ -106,30 +106,28 @@
           An earlier version of the Time Off Request Detail screen had used the header "Other Staff Time Off", which was not as specific and implied that it was all staff from that location. We wanted to make it clear that only the employees who shared job codes with the original requesting employee would be listed here, so it was changed to "Similar Time Off Requests".
 
           <figure><img src="./img/r365/mob-trade.png"><figcaption></figcaption></figure>
-          <p>They say to pick your battles, and this was one of the ones I chose to advocate for. The product owner wanted to include labels like "original hours" and "net change resulting hours", which were highly descriptive but not at all colloquial. I opted to drop the technical labels.</p>
+          <p>They say to pick your battles, and this was one of the ones I chose to advocate for. The product owner suggested labels like "original hours" and "net change resulting hours", which were highly descriptive but not at all colloquial. I opted to drop the technical labels.</p>
           <p>The details of the specific shifts being traded were of secondary concern, so I treated them accordingly in my design.</p>
 
           <p>We removed the star rating since the product owner admitted it was a 'nice to have' and that some restaurants might not use the rating system at all.</p>
 
-          <p>Archived views and how to indicate original schedule compared to the requested one. Ended up displaying them above and below, instead of side by side. Archived view was also not possible to display the previous schedule, so we only displayed the approved one (or that the request had been denied).</p>
+          <!--<p>Archived views and how to indicate original schedule compared to the requested one. Ended up displaying them above and below, instead of side by side. Archived view was also not possible to display the previous schedule, so we only displayed the approved one (or that the request had been denied).</p>-->
           <figure><img src="./img/r365/mob-avail.png"><figcaption></figcaption></figure>
-          <p>Indicating the 'before' and 'after' states. I hadn't wanted to make the schedule redundant and only indicate the changed times, but limited horizontal real estate so I chose to display them vertically. Color to indicate differences in an employee's schedule, whether more hours of availability (green) or less (red).</p>
+          <p>In an early iteration of the Availability Change Details screen, I only indicated the timeframes that had been modified. However, due to mobile's limited horizontal real estate, I chose to display them vertically. I utilized color to indicate differences in an employee's schedule, whether the updated day had more hours of availability (green) or less (red).</p>
 
 
 
         </article>
         <article>
-          <h3><span class='anchor' id='labor'></span>Implementation</h3>
+          <h3><span class='anchor' id='implementation'></span>Implementation</h3>
           <p>I worked closely with the mobile development team for this project in order to fully understand our capabilities and restrictions from a back-end point of view. For example, some of the features the product manager and I wanted to implement would have required too heavy of a lift from our backlogged back-end team, so we came up with a workaround or chose not to display those items in the sections it would most affect.</p>
-          [screenshot of requests already submitted by employee; Complicated for the back-end without creating more fields in the database, so we chose to forego the number on the archived views.]
+          <!--[screenshot of requests already submitted by employee; Complicated for the back-end without creating more fields in the database, so we chose to forego the number on the archived views.]-->
             
             <p>Change is always difficult. Recognizing this, we empowered our customer success department with internal learning guidelines, including an in-app walkthrough of the new features. We hoped this would alleviate some of the pains normally associated with onboarding. Providing this quick-start guide as documentation for our end users as well as our internal support folks would help restaurant managers get the most value out of the new application.</p>
           
         </article>
-        <h3><span class='anchor' id='validation'></span>Validation</h3>
-        <p></p>
-        <h4>Reflection</h4>
-        <p>Mobile Scheduling is another project where I'm fairly proud of the end UI - attributable to the iterations and focus on a clean, clear design. I'd wondered if designing for mobile might feel too constrained, but I actually appreciated how it forced me to consider the use for each button and line of text. Is this truly necessary? Can we get by without it? If we don't include this information here, would someone understand everything around it?</p>
+        <h3><span class='anchor' id='reflection'></span>Reflection</h3>
+        <p>Mobile Scheduling is another project where I'm fairly proud of the end UI - attributable to the iterations and focus on a clean, clear design. I'd wondered if designing for mobile might feel too constrained, but I actually appreciated how it forced me to consider the use for each button and line of text - whether elements were truly necessary, and if they weren't included, would someone be able to understand based on context clues and affordances.</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
