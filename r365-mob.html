@@ -70,13 +70,13 @@
         </article>
         <article>
           <h3>Process</h3>
-          <p>Since we had garnered so much information from our web scheduling interviews, most of my time on this project was focused on the user interface. The product owner stressed that managers, unable to interacft with customers in the back office, should be freed to be in the front of house as much as possible. My goal was to <b>surface only metrics relevant to manager priorities</b>, in a way that would be accessible and actionable.</p>
+          <p>Since we had garnered so much information from our web scheduling interviews, most of my time on this project was focused on the user interface. The product owner stressed that managers, unable to interact with customers in the back office, should be freed to be in the front of house as much as possible. My goal was to <b>surface only metrics relevant to manager priorities</b>, in a way that would be accessible and actionable.</p>
           <ul><b>Manager priorities:</b>
             <li>Identifying when overtime hours would be triggered (in an effort to avoid such instances),</li>
             <li>retaining authority over scheduling, and</li>
             <li>keeping employees informed of any changes to their schedule. </li>
           </ul>
-          <p>Design-wise, I started with our Shift Offer process, the most complex of the requests. We thought there might be a need to view each of the employees' schedules, so I sketched possible visualizations of these schedules. As we progressed, it became more apparent which information was most necessary for a lightweight manager scheduling MVP.</p>
+          <p>Design-wise, I started with our Shift Offer process, the most complex of the requests. I sketched possible visualizations of each set of requests. As we progressed, it became more apparent which information was most necessary for a lightweight manager scheduling MVP.</p>
           <p>I received helpful feedback on my design from my colleague, also a UX designer. I also spent time working closely with the mobile development team, fine-tuning the design and ensuring consistency between our Android and iOS applications.</p>
 
         </article>
@@ -85,31 +85,32 @@
           <!--<p>The next step in my process was synthesizing what we knew about our users' experience.</p>
           <p>Our bigger clients were interested in getting all of their locations onto the scheduling platform for oversight. However, they took a hands-off approach to enforcing this, so only a few locations were using our "time off requests" feature. Other GMs preferred to track time off requests with Google Docs.</p>-->
           
+          <h4>Modifying existing processes</h4>
           <p>One of our existing processes was troubling clients, so the first step was to reconsider it. <b>Shift Drop</b> was difficult for certain restaurants because it meant their employees would not take ownership of shifts originally assigned to them. A clunky and painful experience for managers because then they had to put in the legwork to find a replacement for the employee who was attempting to drop a shift. The product owner decided our best move was to alter this paradigm and put the onus on the employee attempting to drop a shift.</p>
           <p>We toyed with different wording. On the employee side, "Claim Shift" became "Request Shift". For the managers, we toyed with "Shift Bidding" but ended with "Shift Offer", to reflect the actual request made by the original employee, while "Shift Bid" only refers to the claim request.</p>
 
           <!--https://blog.vcssoftware.com/what-are-the-benefits-of-shift-bidding-->
 
           <figure><a href="./img/r365/mob-flow1.png" target=_blank><img src="./img/r365/mob-flow1.png"></a><figcaption></figcaption></figure>
-          <p>We streamlined this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. Time is money, so we wanted to save the managers time of having to handle these shift drops. Reducing the potential points of failure in this process required minimizing these interactions.</p>
+          <p>We streamlined this process by not passing the request along to a manager until at least one employee had attempted to claim the shift. It required more communication between manager and employee, and might lead to bias as managers might be more helpful to certain employees over others. We wanted to save the managers time of having to handle these shift drops. Reducing the potential points of failure in this process required minimizing these interactions.</p>
           
           <figure><a href="./img/r365/mob-flow2.png" target=_blank><img src="./img/r365/mob-flow2.png"></a><figcaption></figcaption></figure>
 
-          <p>The Requests List itself was a summary view of the requests submitted by all employees belonging to that restaurant location. I wanted a safeguard against accidental approvals/denials, so I restricted action to the detailed request pages. Managers could not take any actions on the list view. From the list view, they would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
+          <h4>Request List</h4>
+          <p>The Request List was a summary view of the requests submitted by all employees belonging to that restaurant location. I restricted action to the detailed request pages as a safeguard against accidental approvals or denials. Managers could not take any actions on the list view. From the list view, they would see only vital information for each request - the request type, the employee who had submitted the request, the date/time of request, and the request's status.</p>
 
 
           <figure><img src="./img/r365/mob-badges.png"><figcaption>An early iteration of Request List showed approved and denied requests in the same list as pending requests</figcaption></figure>
-          <p>Filters for Request List were an important one on my list. A manager might have access to multiple locations' requests, or they might only want to view request from a certain time period.</p>
-          <figure><img src="./img/r365/mob-filter.png"><figcaption>The first and last drafts of my Filters page</figcaption></figure>
-          <p>I wanted to display requests details pages so they were easy to read.</p>
+          <p>It was important to fine-tune the filtering process for the Request List. A manager might want to view requests from multiple locations at once, or they might only want to view those from a certain time period.</p>
+          <figure><img src="./img/r365/mob-filter.png"><figcaption>The first and final drafts of my Filters page</figcaption></figure>
+          <h4>Request Details</h4>
+          <p>I designed request details pages so they were intuitive and easy to interpret, leaning on font color, weight, and placement.</p>
           <figure><img src="./img/r365/mob-tor.png"><figcaption></figcaption></figure>
-          An earlier version of the Time Off Request Detail screen had used the header "Other Staff Time Off", which was not as specific and implied that it was all staff from that location. We wanted to make it clear that only the employees who shared job codes with the original requesting employee would be listed here, so it was changed to "Similar Time Off Requests".
+          An earlier version of the Time Off Request Detail screen had used the header "Other Staff Time Off", which was not as specific and implied that it was all staff from that location. I wanted to clarify that only the employees who shared job codes with the original requesting employee would be listed here, so I stuck with "Similar Time Off Requests".
 
           <figure><img src="./img/r365/mob-trade.png"><figcaption></figcaption></figure>
-          <p>They say to pick your battles, and this was one of the ones I chose to advocate for. The product owner suggested labels like "original hours" and "net change resulting hours", which were highly descriptive but not at all colloquial. I opted to drop the technical labels.</p>
-          <p>The details of the specific shifts being traded were of secondary concern, so I treated them accordingly in my design.</p>
-
-          <p>We removed the star rating since the product owner admitted it was a 'nice to have' and that some restaurants might not use the rating system at all.</p>
+          <p>The product owner suggested labels like "original hours" and "net change resulting hours", which were highly descriptive but not at all colloquial. I opted to drop the technical labels and replace them with the more natural "hours after trade".</p>
+          <p>The details of the specific shifts being traded were of secondary concern, so I treated them accordingly in my design. After discussion with the product owner, star rating was confirmed as a 'nice to have' as some restaurants might not use the rating system at all.</p>
 
           <!--<p>Archived views and how to indicate original schedule compared to the requested one. Ended up displaying them above and below, instead of side by side. Archived view was also not possible to display the previous schedule, so we only displayed the approved one (or that the request had been denied).</p>-->
           <figure><img src="./img/r365/mob-avail.png"><figcaption></figcaption></figure>
@@ -127,7 +128,7 @@
           
         </article>
         <h3><span class='anchor' id='reflection'></span>Reflection</h3>
-        <p>Mobile Scheduling is another project where I'm fairly proud of the end UI - attributable to the iterations and focus on a clean, clear design. I'd wondered if designing for mobile might feel too constrained, but I actually appreciated how it forced me to consider the use for each button and line of text - whether elements were truly necessary, and if they weren't included, would someone be able to understand based on context clues and affordances.</p>
+        <p>I'm fairly proud of my work on Mobile Scheduling - attributable to the iterations and focus on a clean, clear design. I'd wondered if designing for mobile might feel too constrained, but I actually appreciated how it forced me to consider the use for each button and line of text - whether elements were truly necessary, and if they weren't included, would someone be able to understand based on context clues and affordances.</p>
         </article>
         <!-- <article>
 What was the final result? How did it get made? How did you measure its efficacy? Did you measure success?
