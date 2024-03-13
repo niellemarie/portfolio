@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116071267-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116071267-1');
+</script>
+
+  <!-- Full Story -->
+    <script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'fullstory.com';
+  window['_fs_org'] = 'BF740';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+      g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+      o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+      y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+      y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(){};
+  })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Danielle Dayto's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="./project.css">
+</head>
+
+<body>
+    <object class='nav-container' data='./navalt.html'></object>
+
+  <div class="wrapper">
+    <div class='Project-header'>
+      <h1>Designing a payroll integration experience for restaurant owners</h1>
+    </div>
+    <div class='project-container'>
+      <div class='project-nav'>
+        <h5>Outline</h5>
+        <a href='#story'>Overview</a><br />
+        <a href='#objective'>Objective</a><br />
+        <a href='#discovery'>Discovery</a><br />
+        <a href='#design'>Design</a><br />
+        <a href='#validation'>Validation</a>
+      </div>
+      <div class='Project-left'>
+      </div>
+      <div class='Project-body'>
+        <article>
+          <h3><span class='anchor' id='story'></span>Overview</h3>
+          <p>In the past, restaurant owners using Toast had a fragmented understanding of their monthly expenses. We showcased data for their sales and expenses, but it didn’t automatically include labor—which makes up approximately 30% of restaurant costs. To see how labor affected their financial performance, restaurant owners had to manually enter Toast Payroll information into xtraCHEF and/or QuickBooks. Some restaurants would export a CSV from Toast Payroll, make manual adjustments, and use a third-party converter to push their payroll into Quickbooks. We changed that.</p>
+          <h3><span class='anchor' id='objective'></span>Objective:</h3>
+          <blockquote>Leverage xtraCHEF's existing integration with QuickBooks Online to pull labor expenses from Toast Payroll, calculate prime cost, and automatically create corresponding journal entries in QBO.</blockquote>
+    
+          <p>Shortly after Toast’s acquisition of xtraCHEF, our team began exploring the concept of Payroll Integration, aiming to leverage XC’s existing QBO integration to pull labor expenses from Toast Payroll, calculate prime costs, and push to QBO. Since xtraCHEF already synced sales from Toast POS to QBO, we saw payroll sync as a natural expansion of our existing model. xtraCHEF could seamlessly pull payroll directly from Toast Payroll at the end of each pay cycle. This would surface labor costs for managers as soon as possible.</p>
+          <p>We believed that by seamlessly syncing sales, payroll, and COGS data to a customer’s accounting software, we will achieve automated, high-accuracy COGS data where customers need it.</p>
+          <b>What we'd offer:</b>
+          <ul>
+            <li><i>Weekly prime cost calculations</i>: Customers previously had to allocate their labor costs to a single date per pay cycle, resulting in unrealistic cost overviews. With Payroll Integration, customers who processed payroll on a biweekly/monthly basis could spread their labor costs evenly over the duration of the entire pay cycle, giving a more balanced and accurate view. From there, they can view their operating summary by whatever date range they’re interested in, regardless of when their week or month starts.</li>
+            <figure><a href="./img/toast/payroll-allocation.png"><img src="./img/toast/payroll-allocation.png" /></a><figcaption>Allocating labor evenly</figcaption></figure>
+            <li><i>Automatic posting of payroll data to QuickBooks</i>, eliminating restaurants' reliance on paid third-party integration tools.</li>
+            <li><i>Next-day journal entry posting to QBO</i>, a time-saver for accountants. Manual data entry has a huge potential to lead to inaccuracies - a 2 becoming a 3, additional zeroes throwing everything off. No more of that. Just set it up once and you’re good to go. We will capture and consume all pay cycles, including off-schedule special payouts like bonuses and missed payments. Never have to enter it a second time.</li>
+          </ul></article>
+        <article>
+          <h3>Process</h3>
+          <h4>Moving away from the legacy design system</h4>
+          <p>As the solo designer on the team, I was encouraged to design something that could be delivered quickly. The engineers weren’t comfortable developing in React at the time, so I was expected to use components/patterns from xtraCHEF’s legacy design system for them to utilize.</p>
+          <p>Since we sought to make the Toast experience more seamless with Payroll Integration, I saw it as an opportunity to incorporate Toast patterns within xtraCHEF for the first time. I prepared two sets of wireframes: one using the legacy design system, and one using Toast’s design system (Buffet). I realized that xtraCHEF’s information-dense content would require wider and more robust tables than what currently existed in Buffet. I talked through those needs with our Buffet team and the front-end engineering team to arrive at a solution.</p>
+          <figure><a href="./img/toast/payroll-legacy.png"><img src="./img/toast/payroll-legacy.png" /></a><figcaption>Early iteration using xtraCHEF's legacy design system</figcaption></figure>
+          <figure><a href="./img/toast/payroll-buffet.png"><img src="./img/toast/payroll-buffet.png" /></a><figcaption>Working toward a more unified Toast platform using the Buffet design system</figcaption></figure>
+          <p>I advocated for the Buffet version whenever possible, especially with our product and engineering leaders. Inspired by the visuals of what could be, our engineering team gained motivation to build it with React. I assisted by providing relevant documentation and links to Storybook. When developers had challenges with implementation, I encouraged cross-team communication so they could learn from teams that were comfortable with React.</p>
+          <!-- *what does this project say about me: strong perspective on future of product, determined, cares about consistency* *flexibility | building for power users | approachability for rx owners with little context* -->
+
+          <h4>Championing simplicity</h4>
+          <p>Restaurant operators are often confused by accounting jargon, I designed a Payroll Setup process that minimized this confusion. The process begins with simple questions, and the user’s answers affect their subsequent experience: columns and categories are removed when they don’t apply, reducing cognitive load. I made dropdown fields searchable, provided explanations of payroll categories, and used intuitive industry language to help restaurant users complete unfamiliar tasks. I advocated for simplicity and ease of use throughout the design process, designing a bulk update option for categorizing multiple line items at a time.</p>
+          <p>I took steps to reduce cognitive load by removing irrelevant columns. The experience would begin with the user deciding how they wanted to set up their payroll, and conclude with mapping. By default, the only columns available were Line Item and Labor Group. If the user chose to enable particular selections during setup, the table would add the relevant attributes. The table would grow to include a Class column if “post by class” was enabled, and a GL column if “payroll sync” was enabled.</p>
+          <figure><a href="./img/toast/payroll-table.png"><img src="./img/toast/payroll-table.png" /></a><figcaption>The table by default would only include Job and Labor Group as columns, and add columns where relevant.</figcaption></figure>   
+          <figure><a href="./img/toast/payroll-sync.png"><img src="./img/toast/payroll-sync.png" /></a><figcaption>We'd add the GL Description column if they chose to payroll sync.</figcaption></figure>   
+          <figure><a href="./img/toast/payroll-class.png"><img src="./img/toast/payroll-class.png" /></a><figcaption>The table would include a Class column if "post by class" was enabled.</figcaption></figure>   
+          <p>I included a search bar within our dropdowns, as there could be upwards of 200 GL codes.</p>
+          <p>Along the way, I updated my design to accommodate additional complexity. One such example was prompting the user for a vendor selection if an Accounts Payable code was selected. I kept simplicity in mind, resisting the “easy solution” of including an additional column with limited relevance and instead proposing an “expanded row” approach. This saved precious real estate, prevented clutter on the table, and made the additional dropdown’s relevance more obvious.</p>
+          <figure><a href="./img/toast/payroll-ap.png"><img src="./img/toast/payroll-ap.png" /></a><figcaption>The vendor dropdown would appear directly below the GL code dropdown if an Accounts Payable code was selected.</figcaption></figure>          
+
+          <h4>Onboarding</h4>
+          <p>I also reached out to the onboarding team and in-product education team to leverage existing Toast onboarding patterns and tooling. I created an in-app tutorial that users could open or dismiss whenever they wanted. I then prototyped the payroll setup experience and conducted usability research to evaluate whether brand-new users would see success with the setup process.</p>
+          <ul>
+            <li>Payroll setup should be a breeze - we leaned on Pendo to provide bite-sized in-app tutorials that users can open or dismiss whenever they want. I designed a self-paced walkthrough with quick tips.</li>
+            <li>Payroll posting by labor group - this is a big one for teams analyzing FOH and BOH labor separately. We’re giving restaurants the flexibility to analyze labor in different groups, taking differing hourly rates and salaries into account. xtraCHEF provides default labor groups, but restaurants are free to modify them as they please.</li>
+            <li>All that payroll integration requires from the user is a simple mapping exercise. Our focus here is streamlining the user’s journey to their endgoal, whatever that may be. If they only want to sync to their accounting system and don’t care as much about the reports, that’s fine. All they’ll have to set up is GL codes. Or if they only want to set up the Labor Group assignments to get access to their prime cost reports, they can do that too.</li>
+          </ul>    
+          
+          
+          <h3><span class='anchor' id='validation'></span>Validation</h3>
+          <p>I ran usability tests with restaurant employees who had never used xtraCHEF and had sole responsibility for their restaurants' day-to-day financial operations. I hypothesized that users would choose to complete an in-product tutorial and learn the benefits of assigning payroll items for reporting and sync purposes.</p>
+          <blockquote>"That would enable me to save a whole lot of time and effort in terms of data entry."</blockquote>
+          <p>All participants found value in the concept of payroll sync and commented that they would proceed with the tutorial when visiting Payroll Setup for the first time. They intuited how to update multiple line items simultaneously, and mostly understood the value in categorizing labor.</p>
+          <p>Based on the feedback, I modified the Labor Group tutorial and added examples of items that shouldn't be assigned. I also added another setting for enabling/disabling classes (an attribute that most restaurants would not use).</p>
+          <blockquote>"Since this is something I'm not familiar with, I would go through the tutorial. The explanation for each category is helpful and easy to follow."</blockquote><br>
+          
+          <h4>Reflection and next steps</h4>
+          <p>The engineering team learned React and Buffet, and we made it less painful for restaurants to understand their financial performance by including labor expenses on their Operating Summary report.</p>
+          <p>Now restaurants can automatically access all their KPIs without having to manually input data themselves. We also eliminated users’ reliance on other integration tools to sync their payroll data to Quickbooks. This helps restaurants save time, money, and effort: shifting their focus from tedious redundant tasks, to seeing the bigger picture of their overall business health. As of 2022, 200+ restaurants (21% of users who have Toast Payroll + xtraCHEF) have Payroll Integration enabled. Payroll Integration allows users to easily accomplish their tasks when they are ready, whether that’s syncing to their accounting system or accessing their prime cost reports.</p>
+         
+        </article>
+      </div>
+      <div class='Project-details'>
+        <h5>Details</h5>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Context</span>
+          <span class='lead'>Eliminating restaurants' reliance on single-use integration tools and remain consistent wtih the Toast platform</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Date</span>
+          <span class='lead'>Dec 2021 - Feb 2022</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Tools</span>
+          <span class='lead'>Figma</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Role</span>
+          <span class='lead'>Product designer</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Deliverables</span>
+          <span class='lead'>Wireframes, UI, interactive prototype</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Device</span>
+          <span class='lead'>Desktop computer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <object class='footer-container' data='./footer.html'></object>
+</body>
+
+</html>

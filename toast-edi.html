@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116071267-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116071267-1');
+</script>
+
+  <!-- Full Story -->
+    <script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'fullstory.com';
+  window['_fs_org'] = 'BF740';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+      g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+      o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+      y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+      y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(){};
+  })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Danielle Dayto's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="./project.css">
+</head>
+
+<body>
+    <object class='nav-container' data='./navalt.html'></object>
+
+  <div class="wrapper">
+    <div class='Project-header'>
+      <h1>Creating an enrollment flow for vendor information</h1>
+    </div>
+    <div class='project-container'>
+      <div class='project-nav'>
+        <h5>Outline</h5>
+        <a href='#story'>Overview</a><br />
+        <a href='#objective'>Objective</a><br />
+        <a href='#discovery'>Discovery</a><br />
+        <a href='#design'>Design</a><br />
+        <a href='#validation'>Validation</a>
+      </div>
+      <div class='Project-left'>
+      </div>
+      <div class='Project-body'>
+        <article>
+          <h3><span class='anchor' id='story'></span>Overview</h3>
+          <p>After making purchases from their vendors, restaurant owners upload their receipts & invoices to xtraCHEF to aggregate purchase information and understand their cost of goods. The scan/upload process is time-consuming and often deprioritized by restaurant owners who focus on customer interactions. Often, they will save receipts for several days, then batch upload multiple receipts at once, causing an unfortunate but inevitable delay in the insights xtraCHEF can provide.</p>
+
+          <p>xtraCHEF offers a shortcut: the ability to set up an EDI integration with particular vendors. With the restaurant's consent, xtraCHEF can automatically receive vendor invoices directly from the vendor.</p>
+          <p>The initial setup does take time: restaurants sent in 900+ monthly support tickets for EDI configuration, which took an avg 120 hours a month to resolve, and 5.5 avg agent touches per ticket. This resulted in 29.8% of EDI-eligible invoices coming in through EDI (instead of manual upload). This was a very manual process and burdened our team (from Onboarding to Care) to prompt customers if they were interested in initiating an EDI connection.</p>
+          <figure><a href="./img/toast/edi-before.png"><img src="./img/toast/edi-before.png" /></a><figcaption>Original EDI process</figcaption></figure>
+
+
+        <article>
+          <h3><span class='anchor' id='objective'></span>Objective:</h3>
+          <blockquote>Allow customers to initiate EDI integration for their vendors, increasing EDI adoption and reducing downsells.</blockquote>
+
+          <p>We'd know we're successful when we: reduced the burden on our support team, reduced number of support tickets for EDI, increased % of enabled EDI-eligible invoices; reduce care hours, increase % of accurate invoices, reduce avg invoice completion time; increase customer satisfaction (measured w/ pNPS). This would also eliminate the reliance on emails and allow us to track requests more systematically.</p>
+    
+          <figure><a href="./img/toast/edi-after.png"><img src="./img/toast/edi-after.png" /></a><figcaption>Updated EDI process, relying on systematic approach rather than human labor</figcaption></figure>
+        </article>
+
+        
+
+        <article>
+          <h3>Process</h3>
+          <h4>Catching customers' attention</h4>
+          <p>How do we first get a customer’s attention while they’re in our platform? I found inspiration from financial institutions like Mint or Rocketmoney, supported by Plaid. Their approach to encouraging customers to link their bank accounts or financial institutions. My major takeaway was that they quickly explain the ask and value prop. A timeline for their connection, logos for the different banks for quick and easy recognition. Once it’s connected, they show the apps or accounts that it’s associated with.</p>
+          <p>Similarly, how could we demonstrate EDI's value once we received invoices from relevant vendors? What immediate benefits can we provide to customers?</p>
+          <p>We can leverage the power of customer motivation. They don’t enjoy the invoice upload process—that much is obvious. They want to reduce the time they spend manually uploading invoices. So natural next step: prompt them as they’re uploading, to directly connect to those vendors.</p>
+          <figure><a href="./img/toast/payroll-legacy.png"><img src="./img/toast/payroll-legacy.png" /></a><figcaption>(UPLOAD SLIDER)</figcaption></figure>
+          <p>Let them know that they can save time with direct connections to vendors.</p>
+          <figure><a href="./img/toast/payroll-buffet.png"><img src="./img/toast/payroll-buffet.png" /></a><figcaption>(DASHBOARD)</figcaption></figure>
+          <p>Adding a new widget to the dashboard. Giving examples of EDI-eligible vendors, and prompting them to connect it.</p>
+          <figure><a href="./img/toast/payroll-buffet.png"><img src="./img/toast/payroll-buffet.png" /></a><figcaption>(NOTIFICATION)</figcaption></figure>
+          <p> if they uploaded an invoice from an EDI vendor for the first time, letting them know that we can reduce their invoice turnaround time.</p>
+          (NOTIFICATION AFTER SUCCESSFUL EDI)
+          <p> Instead of uploading more invoices and potentially creating duplicates, we want to catch their attention with a new notification: We’ve received your first invoice from this vendor. So you don’t have to upload invoices after this invoice date.</p>
+
+
+          <p>Focus on value prop: The landing page quickly gives a rundown of EDI, why switch over, what they can do with it, and what they need to get started. Visual diagram of what changes in their process and the amount of time they save. We provide a list of vendors that are eligible for EDI integration.</p>
+          <p>Including the logo images for each vendor is a great way to leverage customers’ brand recognition and get vendors onboard.</p>
+
+          <h4>The ideal state: Minimal customer input</h4>
+          <p>Not having to collect any information from existing customers, and pulling the information ourselves directly from their invoices.</p>
+
+          <h4>The first step: Collecting information</h4>
+          <p>I worked on templatizing the information we might need. We worked with the care team to identify each EDI vendor’s requirements and processes. Then, I started fine-tuning the pages for each vendor—so after a customer selects that they want to establish an EDI connection for US Foods, this is the information we’re collecting for single-loc restaurants, vs multi-loc restaurants. Or for Cheney Bros, where we’re not collecting any info from the cx but prompting them to reach out to their sales rep for that vendor.</p>
+          <p>We automatically generate a Zendesk ticket for each integration request. We also let them know that they can track progress on their integration and that they should keep uploading those invoices.</p>
+
+          
+          
+          <h3><span class='anchor' id='validation'></span>Validation</h3>
+          <p>We tested internally, with 100% task success.</p>
+          <p>Launched the initial pilot to 120 multi-loc rx, 10% engagement. Slow roll-out. Monitored adoption rates for several weeks. Tried to be cognizant about volume of interest as care team expanded. Hoping to keep # of config tickets low while increasing EDI invoice volume. Now available for all post-Q3’23 cx</p>
+          
+          <h4>Reflection and next steps</h4>
+          <p></p>
+         
+        </article>
+      </div>
+      <div class='Project-details'>
+        <h5>Details</h5>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Context</span>
+          <span class='lead'>Allowing customers to opt into vendor EDI integration</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Date</span>
+          <span class='lead'>June - August 2023</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Tools</span>
+          <span class='lead'>Figma</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Role</span>
+          <span class='lead'>Product designer</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Deliverables</span>
+          <span class='lead'>Wireframes, UI</span>
+        </div>
+        <div class='Project-detail'>
+          <span class='smallcaps'>Device</span>
+          <span class='lead'>Desktop computer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <object class='footer-container' data='./footer.html'></object>
+</body>
+
+</html>
